@@ -1,0 +1,1616 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#0c1528"><meta name="description" content="Simulados de Oficial de Justiça do TJ-SP: 70 questões autorais, 280 questões reais com gabarito, trilhas por disciplina e diagnóstico de desempenho."><link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png"><link rel="apple-touch-icon" href="./icons/icon-192.png"><link rel="manifest" href="./manifest.webmanifest"><title>Trilha TJ-SP · Oficial de Justiça 2027</title>
+<style>
+:root{--bg:#081020;--panel:#101c30;--panel2:#14233a;--ink:#eef5ff;--muted:#9baec5;--line:#263851;--teal:#4cdbc5;--teald:#133c43;--gold:#ffce79;--red:#ff8794;--blue:#82adff;--radius:18px;color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:radial-gradient(1000px 480px at 96% -20%,#15395c 0,transparent 65%),var(--bg);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:var(--teal);text-decoration:none}a:hover{text-decoration:underline}.layout{display:flex;min-height:100vh}.side{width:244px;flex:none;background:#0c1729;border-right:1px solid var(--line);padding:28px 16px 20px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:18px}.brand{display:flex;gap:12px;align-items:center;margin:0 8px 22px;font-size:19px;line-height:1.15;font-weight:800}.logo{width:41px;height:41px;border-radius:13px;background:linear-gradient(130deg,#3ad8b8,#438fd4);display:grid;place-items:center;color:#071827;font-weight:900;letter-spacing:-1px}.nav{display:flex;flex-direction:column;gap:5px}.nav button{display:flex;align-items:center;text-align:left;gap:12px;border:0;border-radius:12px;padding:12px 13px;color:var(--muted);background:transparent;width:100%;font-weight:600;font-size:14px}.nav button.active,.nav button:hover{background:#172d45;color:var(--ink)}.nav .icon{width:21px;text-align:center;font-size:18px}.sidefoot{margin-top:auto;font-size:12px;color:var(--muted);padding:14px 10px;border-top:1px solid var(--line)}.main{flex:1;min-width:0;padding:30px clamp(18px,4.1vw,67px) 70px;max-width:1400px;margin:0 auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:30px}.eyebrow{color:var(--teal);font-size:11px;text-transform:uppercase;letter-spacing:.16em;font-weight:800}.topright{display:flex;align-items:center;gap:10px}.pill{border-radius:60px;border:1px solid var(--line);padding:8px 11px;background:#12253c;color:var(--muted);font-size:12px;font-weight:700}.h1{font-size:clamp(28px,3vw,41px);letter-spacing:-.04em;line-height:1.14;margin:0 0 11px}.sub{color:var(--muted);font-size:15px;max-width:780px;margin:0 0 26px}.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);background:linear-gradient(180deg,#152339 0%,#101b2e 100%);padding:21px;border-radius:var(--radius);min-width:0;box-shadow:0 8px 24px #020b1820}.card h3{font-size:16px;letter-spacing:-.02em;margin:0 0 9px}.card p{margin:0;color:var(--muted)}.c3{grid-column:span 3}.c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}.c12{grid-column:span 12}.stat{font-size:34px;font-weight:800;letter-spacing:-.05em;margin:6px 0 2px}.stat-caption{font-size:12px;color:var(--muted)}.space{margin-top:21px}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:#19304c;color:var(--ink);border-radius:12px;font-size:13px;font-weight:750;padding:11px 16px;white-space:normal;line-height:1.3}.btn:hover{background:#234263;text-decoration:none}.btn.primary{background:var(--teal);border-color:var(--teal);color:#062722}.btn.primary:hover{background:#76f0db}.btn.light{background:transparent}.btn.warn{color:var(--red)}.btn:disabled{opacity:.45;cursor:not-allowed}.muted{color:var(--muted)}.small{font-size:12px}.smaller{font-size:11px}.sectiontitle{font-size:21px;letter-spacing:-.035em;margin:31px 0 15px}.flex{display:flex;justify-content:space-between;align-items:center;gap:12px}.grow{flex:1}.tag{display:inline-block;background:#1a3349;color:#bcefe5;border:1px solid #2c4857;padding:3px 9px;border-radius:100px;font-size:11px;font-weight:750;margin:2px}.tag.gold{background:#47351e;color:#ffdc9f;border-color:#755531}.tag.blue{background:#1b3151;color:#b6cbff;border-color:#314d76}.tag.red{background:#482633;color:#ffa3ad;border-color:#724257}.progress{height:9px;border-radius:100px;background:#263950;overflow:hidden;margin:12px 0 7px}.progress>span{display:block;height:100%;border-radius:100px;background:linear-gradient(90deg,#399cce,#4cdbc5);transition:width .3s}.meterline{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}.steps{display:flex;flex-direction:column;gap:11px;margin-top:12px}.step{display:flex;gap:12px;align-items:flex-start}.dot{flex:none;width:26px;height:26px;border-radius:9px;display:grid;place-items:center;background:#24435a;color:var(--teal);font-weight:800;font-size:12px}.step strong{font-size:13px}.step p{font-size:12px;margin:2px 0 0}.module{display:flex;flex-direction:column;gap:9px;height:100%}.module h3{margin:0}.module .buttons{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:8px}.line{height:1px;background:var(--line);margin:15px 0}.list{padding-left:20px;margin:11px 0;color:var(--muted)}.list li{padding:4px 0}.barrow{display:grid;grid-template-columns:152px minmax(0,1fr) 48px;align-items:center;gap:10px;margin:12px 0}.barrow span{font-size:12px;color:var(--muted)}.barrow .track{height:10px;background:#263950;border-radius:99px;overflow:hidden}.barrow .fill{display:block;height:100%;background:var(--teal);border-radius:99px}.barrow .value{text-align:right;color:var(--ink);font-size:12px;font-weight:800}.qa{font-size:clamp(19px,2.3vw,25px);line-height:1.38;letter-spacing:-.025em;margin:14px 0 23px;white-space:pre-wrap}.answer{display:flex;gap:13px;align-items:flex-start;cursor:pointer;border:1px solid #2d3d53;border-radius:12px;padding:14px 16px;margin:9px 0;background:#132238;transition:background .15s,border-color .15s}.answer:hover{background:#1c334c;border-color:#47617d}.answer b{display:grid;place-items:center;background:#253851;min-width:26px;height:26px;border-radius:8px;font-size:12px}.answer.selected{border-color:var(--teal);background:#193b40}.answer.correct{border-color:#47bea0;background:#143e37}.answer.incorrect{border-color:#e47783;background:#442331}.answer[aria-disabled=true]{cursor:default}.note{border-radius:12px;background:#1a3145;border:1px solid #31536a;padding:17px 18px;margin:17px 0;color:#dceaf7}.note.success{background:#163a32;border-color:#367b67}.note.error{background:#412630;border-color:#905564}.note h4{margin:0 0 6px;font-size:14px}.note p{margin:0 0 8px}.note .link{font-weight:700;font-size:12px}.selectrow{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:13px}.field{border:1px solid var(--line);border-radius:11px;background:#0d1a2e;color:var(--ink);padding:10px 12px;max-width:100%}select.field{min-width:185px}.plaincheck{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}input[type=checkbox]{accent-color:var(--teal)}.qindex{display:grid;grid-template-columns:repeat(10,1fr);gap:7px;margin:13px 0}.qindex button{border:1px solid #35506c;border-radius:9px;background:#1b2e46;color:var(--ink);padding:8px 0;font-size:12px}.qindex button.done{background:#276357;border-color:#488c7d}.qindex button.current{box-shadow:0 0 0 2px #a6ede1}.timer{font-variant-numeric:tabular-nums;color:var(--gold);font-size:24px;font-weight:800}.source{display:flex;align-items:flex-start;gap:10px;padding:15px 0;border-bottom:1px solid var(--line)}.source:last-child{border:0}.source .n{color:var(--teal);font-weight:900}.textarea{resize:vertical;width:100%;min-height:170px;border:1px solid var(--line);background:#0d1b2c;border-radius:13px;color:var(--ink);padding:16px;line-height:1.55}.disc{font-size:16px;line-height:1.6}.ring{width:95px;height:95px;border-radius:100%;display:grid;place-items:center;background:conic-gradient(var(--teal) var(--p),#25384e 0);margin:auto}.ring>div{background:#142337;width:75px;height:75px;border-radius:100%;display:grid;place-items:center;font-weight:800;font-size:23px}.headmobile{display:none}.hide{display:none!important}button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #7ef9e2;outline-offset:3px}@media(max-width:980px){.c3{grid-column:span 6}.c4{grid-column:span 6}.c5,.c7,.c8{grid-column:span 12}.side{width:208px}.main{padding:24px}}@media(max-width:700px){.layout{display:block}.side{width:100%;height:auto;position:sticky;top:0;z-index:9;padding:10px 10px 8px;display:block;border-right:0;border-bottom:1px solid var(--line);background:#0b1627eb;backdrop-filter:blur(14px)}.side .brand,.sidefoot{display:none}.nav{flex-direction:row;gap:4px;overflow:auto;scrollbar-width:none}.nav button{flex:none;width:auto;display:flex;flex-direction:column;padding:7px 10px;gap:0;font-size:10px;text-align:center;border-radius:9px}.nav .icon{font-size:17px}.main{padding:20px 15px 70px}.topbar{margin-bottom:20px}.h1{font-size:29px}.c3,.c4,.c5,.c6,.c7,.c8{grid-column:span 12}.pill{font-size:11px;padding:6px 9px}.barrow{grid-template-columns:100px 1fr 38px}.card{padding:18px}.qindex{grid-template-columns:repeat(7,1fr)}.selectrow>.field{width:100%}.btn{padding:11px 13px}.hide-mobile{display:none}}
+</style>
+<style>
+.real-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(310px,1fr);gap:18px;align-items:start}
+.real-pdf{height:650px;width:100%;border:1px solid var(--line);border-radius:12px;background:#fff}
+.real-answer-grid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:5px;margin:12px 0 4px}
+.real-num{padding:8px 2px;background:var(--panel2);color:var(--muted);border:1px solid var(--line);border-radius:7px;cursor:pointer;font-weight:700;font-size:12px}
+.real-num.sel{background:var(--teald);border-color:var(--teal);color:var(--teal)}
+.real-num.answered{border-color:#6687aa;color:var(--ink)}
+.real-num.right{background:#123d35;color:#76e8ba;border-color:#247f66}
+.real-num.wrong{background:#441f32;color:#ffabb5;border-color:#90516b}
+.real-num.void{background:#524122;color:#ffdc8d;border-color:#aa863c}
+.real-answer-buttons{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.real-choice{padding:15px 8px;border:1px solid var(--line);border-radius:12px;background:var(--panel2);color:var(--ink);cursor:pointer;font-size:18px;font-weight:800}
+.real-choice.selected{background:var(--teald);color:#8ffff0;border-color:var(--teal)}
+.real-choice.correct{border-color:#65cca8;background:#153f34;color:#b8ffe5}
+.real-choice.incorrect{border-color:#fa7787;background:#492332;color:#ffd6db}
+.real-choice:disabled{cursor:default}
+.real-result{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}
+.real-section{padding:14px;border:1px solid var(--line);background:var(--panel);border-radius:12px;margin:8px 0}
+.real-section b{font-size:17px}
+.real-select{width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:11px;color:var(--ink)}
+.real-report-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:9px;margin-top:12px}
+.real-chip{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:10px}
+.real-link{display:inline-flex;margin:5px 10px 5px 0;color:#99e5ff;font-weight:650}
+@media(max-width:960px){.real-layout{grid-template-columns:1fr}.real-pdf{height:490px}}
+@media(max-width:520px){.real-answer-grid{grid-template-columns:repeat(8,minmax(0,1fr))}.real-num{font-size:11px}.real-pdf{height:440px}.real-choice{padding:12px 5px}}
+</style>
+</head>
+<body><div class="layout"><aside class="side"><div class="brand"><span class="logo">TJ</span><span>Trilha TJ-SP<br><small style="font-weight:600;color:#8ba7bc;font-size:11px">OFICIAL DE JUSTIÇA • 2027</small></span></div><nav class="nav" id="nav"></nav><div class="sidefoot">📚 Plataforma de prática independente, não vinculada ao TJ-SP nem à Vunesp.<br><br>Dados gravados apenas neste navegador.</div></aside><main class="main"><div class="topbar"><div class="eyebrow" id="crumb">PREPARAÇÃO PARA O CONCURSO</div><div class="topright"><span class="pill" id="examcount">14 MAR 2027</span><span class="pill hide-mobile">✦ Vunesp</span></div></div><div id="app"></div></main></div>
+<script>
+'use strict';
+const QUESTIONS=[
+  {
+    "id": 1,
+    "topic": "P1",
+    "stem": "Leia: “A diligência foi repetida porque o endereço informado estava incompleto.” Segundo o trecho, a repetição ocorreu em razão de:",
+    "options": [
+      "desinteresse do servidor",
+      "informação insuficiente sobre o local",
+      "ordem expressa de anulação",
+      "ausência de documento pessoal",
+      "indefinição da competência"
+    ],
+    "answer": 1,
+    "explanation": "A conjunção “porque” introduz a causa: o endereço incompleto motivou a nova diligência.",
+    "law": ""
+  },
+  {
+    "id": 2,
+    "topic": "P1",
+    "stem": "Leia: “Embora estivesse chovendo, o servidor realizou a diligência.” É correto inferir que:",
+    "options": [
+      "a chuva impediu a diligência",
+      "a diligência aconteceu apesar da chuva",
+      "a chuva começou depois da diligência",
+      "a diligência foi cancelada",
+      "a chuva determinou o endereço"
+    ],
+    "answer": 1,
+    "explanation": "“Embora” expressa concessão: uma condição contrária à expectativa não impediu a ação.",
+    "law": ""
+  },
+  {
+    "id": 3,
+    "topic": "P1",
+    "stem": "Leia: “Nem todos os mandados foram cumpridos na manhã de segunda-feira.” A afirmação permite concluir que:",
+    "options": [
+      "nenhum mandado foi cumprido",
+      "todos foram cumpridos",
+      "ao menos um não foi cumprido naquele período",
+      "exatamente metade foi cumprida",
+      "somente um mandado existia"
+    ],
+    "answer": 2,
+    "explanation": "Negar “todos” significa que pelo menos um elemento não atende à condição; não implica que nenhum atenda.",
+    "law": ""
+  },
+  {
+    "id": 4,
+    "topic": "P2",
+    "stem": "Na frase “O servidor entregou a certidão ao cartório. Esse documento foi juntado aos autos.”, a expressão “Esse documento” retoma:",
+    "options": [
+      "servidor",
+      "cartório",
+      "certidão",
+      "autos",
+      "entrega"
+    ],
+    "answer": 2,
+    "explanation": "Trata-se de retomada anafórica: “esse documento” recupera “certidão”.",
+    "law": ""
+  },
+  {
+    "id": 5,
+    "topic": "P2",
+    "stem": "Assinale o conectivo que mantém a relação lógica: “O prazo terminou; ___, o requerimento não pôde ser apresentado tempestivamente.”",
+    "options": [
+      "portanto",
+      "embora",
+      "contanto que",
+      "ainda que",
+      "conforme"
+    ],
+    "answer": 0,
+    "explanation": "“Portanto” introduz consequência ou conclusão decorrente da premissa anterior.",
+    "law": ""
+  },
+  {
+    "id": 6,
+    "topic": "P3",
+    "stem": "Em “A comunicação foi feita de modo célere”, a palavra “célere” equivale, no contexto, a:",
+    "options": [
+      "reservado",
+      "apressado sem cautela",
+      "rápido",
+      "discreto",
+      "incompleto"
+    ],
+    "answer": 2,
+    "explanation": "“Célere” significa rápido, ágil; o contexto não exige precipitação.",
+    "law": ""
+  },
+  {
+    "id": 7,
+    "topic": "P3",
+    "stem": "A expressão “uma montanha de processos” emprega linguagem:",
+    "options": [
+      "estritamente técnica",
+      "literal",
+      "figurada, para indicar grande quantidade",
+      "matemática",
+      "sem sentido identificável"
+    ],
+    "answer": 2,
+    "explanation": "A montanha é metáfora de quantidade elevada, não uma descrição literal.",
+    "law": ""
+  },
+  {
+    "id": 8,
+    "topic": "P4",
+    "stem": "Assinale a alternativa com concordância verbal correta.",
+    "options": [
+      "Haviam vários mandados pendentes.",
+      "Fazem dois dias que o prazo venceu.",
+      "Existe muitos documentos.",
+      "Havia vários mandados pendentes.",
+      "Deve haverem novos autos."
+    ],
+    "answer": 3,
+    "explanation": "“Haver” com sentido de existir é impessoal: “havia”; “fazer” indicando tempo também fica no singular.",
+    "law": ""
+  },
+  {
+    "id": 9,
+    "topic": "P4",
+    "stem": "Assinale a frase com concordância nominal adequada.",
+    "options": [
+      "Seguem anexo as certidões.",
+      "É proibida entrada de pessoas não autorizadas, sem artigo.",
+      "As declarações seguem anexas.",
+      "A documentação estavam pronta.",
+      "É necessárias cautela."
+    ],
+    "answer": 2,
+    "explanation": "O adjetivo “anexas” concorda com “declarações”, feminino plural.",
+    "law": ""
+  },
+  {
+    "id": 10,
+    "topic": "P5",
+    "stem": "Assinale a construção correta quanto ao uso da crase.",
+    "options": [
+      "Compareceu à pé ao fórum.",
+      "Dirigiu-se à unidade judicial.",
+      "Entregou o documento à um servidor.",
+      "Voltou à partir das oito.",
+      "Respondeu à todas as perguntas."
+    ],
+    "answer": 1,
+    "explanation": "O verbo “dirigir-se” rege a preposição a e “unidade” admite artigo a: ocorre à.",
+    "law": ""
+  },
+  {
+    "id": 11,
+    "topic": "P5",
+    "stem": "Assinale a frase com regência considerada adequada na norma-padrão.",
+    "options": [
+      "O servidor assistiu o julgamento, no sentido de presenciar.",
+      "O candidato obedeceu o regulamento.",
+      "O funcionário informou ao interessado a decisão.",
+      "O advogado preferiu recorrer do que concordar.",
+      "O juiz chegou no fórum, como única forma culta."
+    ],
+    "answer": 2,
+    "explanation": "“Informar algo a alguém” é construção correta; preferir rege a, e “obedecer” exige a.",
+    "law": ""
+  },
+  {
+    "id": 12,
+    "topic": "P6",
+    "stem": "Qual frase emprega pontuação adequada?",
+    "options": [
+      "Após o atendimento o servidor, redigiu a certidão.",
+      "Os autos, foram remetidos ao setor.",
+      "Concluída a diligência, o servidor registrou o ocorrido.",
+      "A equipe, chegou ao endereço.",
+      "O prazo, terminou ontem."
+    ],
+    "answer": 2,
+    "explanation": "A oração reduzida anteposta “Concluída a diligência” é isolada por vírgula; não se separa sujeito e verbo.",
+    "law": ""
+  },
+  {
+    "id": 13,
+    "topic": "P6",
+    "stem": "Na frase “Joana, a escrevente do setor, organizou os documentos.”, as vírgulas isolam:",
+    "options": [
+      "oração subordinada adverbial",
+      "aposto explicativo",
+      "vocativo",
+      "sujeito composto",
+      "objeto direto"
+    ],
+    "answer": 1,
+    "explanation": "“A escrevente do setor” explica quem é Joana: aposto explicativo.",
+    "law": ""
+  },
+  {
+    "id": 14,
+    "topic": "P7",
+    "stem": "Assinale a alternativa correta segundo a colocação pronominal normativa.",
+    "options": [
+      "Não entregaram-me a certidão.",
+      "Nunca se esqueceram do prazo.",
+      "Me envie a resposta, como única opção formal.",
+      "Quando entregou-me os autos, saiu.",
+      "Jamais comunicaram-lhe a decisão."
+    ],
+    "answer": 1,
+    "explanation": "Palavras negativas e advérbios como “nunca” atraem o pronome para antes do verbo (próclise).",
+    "law": ""
+  },
+  {
+    "id": 15,
+    "topic": "P7",
+    "stem": "Em “Se houver dúvida, consulte o edital”, a forma verbal “houver” expressa:",
+    "options": [
+      "ordem direta",
+      "fato ocorrido no passado",
+      "hipótese ou condição futura",
+      "certeza no presente",
+      "consequência já realizada"
+    ],
+    "answer": 2,
+    "explanation": "A oração condicional com “se” usa o futuro do subjuntivo para indicar possibilidade futura.",
+    "law": ""
+  },
+  {
+    "id": 16,
+    "topic": "D1",
+    "stem": "Pelo Código Penal, não há crime sem:",
+    "options": [
+      "mandado judicial",
+      "lei anterior que o defina",
+      "sentença condenatória transitada em julgado",
+      "denúncia oferecida",
+      "confissão do agente"
+    ],
+    "answer": 1,
+    "explanation": "O princípio da legalidade exige lei anterior definidora do crime (CP, art. 1º).",
+    "law": "CP, art. 1º"
+  },
+  {
+    "id": 17,
+    "topic": "D1",
+    "stem": "A lei penal posterior que deixa de considerar determinado fato crime:",
+    "options": [
+      "não alcança fatos anteriores",
+      "só se aplica a processos novos",
+      "retroage e faz cessar a execução e os efeitos penais da condenação",
+      "depende de aprovação legislativa adicional",
+      "só vale para crimes culposos"
+    ],
+    "answer": 2,
+    "explanation": "A abolitio criminis tem retroatividade benéfica (CP, art. 2º).",
+    "law": "CP, art. 2º"
+  },
+  {
+    "id": 18,
+    "topic": "D1",
+    "stem": "Para o Código Penal, considera-se praticado o crime no momento:",
+    "options": [
+      "em que começa a investigação",
+      "da ação ou omissão, ainda que outro seja o momento do resultado",
+      "da sentença condenatória",
+      "da denúncia do Ministério Público",
+      "em que a vítima registra ocorrência"
+    ],
+    "answer": 1,
+    "explanation": "O Código Penal adotou a teoria da atividade para o tempo do crime (CP, art. 4º).",
+    "law": "CP, art. 4º"
+  },
+  {
+    "id": 19,
+    "topic": "D2",
+    "stem": "O servidor público que se apropria de bem móvel de que tem posse em razão do cargo pode incorrer em:",
+    "options": [
+      "peculato",
+      "calúnia",
+      "desacato",
+      "ameaça",
+      "falso testemunho"
+    ],
+    "answer": 0,
+    "explanation": "A descrição corresponde ao núcleo do peculato-apropriação (CP, art. 312).",
+    "law": "CP, art. 312"
+  },
+  {
+    "id": 20,
+    "topic": "D2",
+    "stem": "Solicitar vantagem indevida, ainda que fora da função, mas em razão dela, configura em tese:",
+    "options": [
+      "prevaricação",
+      "concussão",
+      "corrupção passiva",
+      "corrupção ativa",
+      "desobediência"
+    ],
+    "answer": 2,
+    "explanation": "Corrupção passiva pode ocorrer pelo verbo “solicitar” (CP, art. 317). Exigir vantagem indevida remete à concussão.",
+    "law": "CP, arts. 316–317"
+  },
+  {
+    "id": 21,
+    "topic": "D2",
+    "stem": "Retardar indevidamente ato de ofício para satisfazer interesse ou sentimento pessoal corresponde a:",
+    "options": [
+      "prevaricação",
+      "peculato",
+      "concussão",
+      "corrupção ativa",
+      "fraude processual"
+    ],
+    "answer": 0,
+    "explanation": "Prevaricação (CP, art. 319) exige finalidade de satisfazer interesse ou sentimento pessoal.",
+    "law": "CP, art. 319"
+  },
+  {
+    "id": 22,
+    "topic": "D3",
+    "stem": "Fazer inserir declaração falsa em documento público para alterar a verdade sobre fato juridicamente relevante pode caracterizar:",
+    "options": [
+      "falsidade ideológica",
+      "lesão corporal",
+      "ameaça",
+      "roubo",
+      "desobediência"
+    ],
+    "answer": 0,
+    "explanation": "A falsidade ideológica se refere ao conteúdo intelectualmente falso do documento (CP, art. 299).",
+    "law": "CP, art. 299"
+  },
+  {
+    "id": 23,
+    "topic": "D4",
+    "stem": "Em regra, a ação penal pública é promovida mediante:",
+    "options": [
+      "queixa do ofendido",
+      "denúncia do Ministério Público",
+      "ação civil pública",
+      "recurso de apelação",
+      "mandado de segurança"
+    ],
+    "answer": 1,
+    "explanation": "A ação penal pública é promovida por denúncia do Ministério Público (CPP, art. 24).",
+    "law": "CPP, art. 24"
+  },
+  {
+    "id": 24,
+    "topic": "D4",
+    "stem": "A ação penal privada se inicia, em regra, por meio de:",
+    "options": [
+      "denúncia",
+      "representação sem peça inaugural",
+      "queixa-crime",
+      "auto de prisão",
+      "petição de inventário"
+    ],
+    "answer": 2,
+    "explanation": "A peça inicial da ação penal privada é a queixa-crime (CPP, art. 30).",
+    "law": "CPP, art. 30"
+  },
+  {
+    "id": 25,
+    "topic": "D4",
+    "stem": "Na ação penal privada, o direito de queixa é:",
+    "options": [
+      "exclusivo do juiz",
+      "do ofendido ou de quem legalmente o represente",
+      "exercido sempre pela polícia",
+      "reservado à Defensoria Pública",
+      "sempre indisponível"
+    ],
+    "answer": 1,
+    "explanation": "O ofendido ou representante legal pode intentar a ação privada (CPP, art. 30).",
+    "law": "CPP, art. 30"
+  },
+  {
+    "id": 26,
+    "topic": "D5",
+    "stem": "Como regra geral, a competência territorial no processo penal é determinada:",
+    "options": [
+      "pelo domicílio da vítima em qualquer hipótese",
+      "pelo local da consumação da infração",
+      "pelo domicílio do juiz",
+      "pela preferência do réu",
+      "pela sede do Ministério Público"
+    ],
+    "answer": 1,
+    "explanation": "A regra do CPP, art. 70, é o lugar em que se consuma a infração, ressalvadas exceções.",
+    "law": "CPP, art. 70"
+  },
+  {
+    "id": 27,
+    "topic": "D5",
+    "stem": "É correto afirmar quanto à prova no processo penal:",
+    "options": [
+      "o juiz nunca pode determinar prova de ofício",
+      "a confissão torna desnecessária toda outra prova",
+      "o juiz formará sua convicção pela livre apreciação da prova produzida em contraditório judicial, com ressalvas legais",
+      "toda prova ilícita é aceita se útil",
+      "o acusado tem obrigação de confessar"
+    ],
+    "answer": 2,
+    "explanation": "O CPP, art. 155, estabelece o contraditório judicial como eixo da formação da convicção e prevê ressalvas.",
+    "law": "CPP, art. 155"
+  },
+  {
+    "id": 28,
+    "topic": "D6",
+    "stem": "A prisão em flagrante pode ser efetuada por:",
+    "options": [
+      "qualquer pessoa, facultativamente; autoridades policiais e seus agentes, obrigatoriamente, nas hipóteses legais",
+      "somente por juiz",
+      "somente pelo ofendido",
+      "somente pelo Ministério Público",
+      "qualquer pessoa, obrigatoriamente em todo caso"
+    ],
+    "answer": 0,
+    "explanation": "CPP, art. 301: qualquer do povo poderá, e autoridades policiais e seus agentes deverão, prender quem esteja em flagrante.",
+    "law": "CPP, art. 301"
+  },
+  {
+    "id": 29,
+    "topic": "D6",
+    "stem": "Segundo o CPP, a citação do réu preso será feita:",
+    "options": [
+      "exclusivamente por edital",
+      "pessoalmente",
+      "apenas por carta simples",
+      "por publicação em jornal",
+      "sempre por meio eletrônico"
+    ],
+    "answer": 1,
+    "explanation": "O art. 360 do CPP prevê a citação pessoal do réu preso.",
+    "law": "CPP, art. 360"
+  },
+  {
+    "id": 30,
+    "topic": "D7",
+    "stem": "Segundo o CPC, o processo começa por iniciativa da parte e se desenvolve:",
+    "options": [
+      "somente após autorização do MP",
+      "por impulso oficial, salvo exceções legais",
+      "apenas por iniciativa do oficial de justiça",
+      "sem contraditório",
+      "exclusivamente por escolha do réu"
+    ],
+    "answer": 1,
+    "explanation": "Art. 2º do CPC: iniciativa da parte e impulso oficial, ressalvadas exceções.",
+    "law": "CPC, art. 2º"
+  },
+  {
+    "id": 31,
+    "topic": "D7",
+    "stem": "O dever de cooperação no processo civil é atribuído:",
+    "options": [
+      "somente ao autor",
+      "somente ao magistrado",
+      "a todos os sujeitos do processo",
+      "somente ao oficial de justiça",
+      "apenas ao Ministério Público"
+    ],
+    "answer": 2,
+    "explanation": "Art. 6º do CPC: todos os sujeitos devem cooperar para decisão justa e efetiva em tempo razoável.",
+    "law": "CPC, art. 6º"
+  },
+  {
+    "id": 32,
+    "topic": "D8",
+    "stem": "O oficial de justiça, segundo o CPC, integra o grupo dos:",
+    "options": [
+      "órgãos legislativos",
+      "auxiliares da Justiça",
+      "membros do Ministério Público",
+      "árbitros públicos",
+      "delegados de polícia"
+    ],
+    "answer": 1,
+    "explanation": "O oficial de justiça é auxiliar da Justiça (CPC, art. 149).",
+    "law": "CPC, arts. 149 e 154"
+  },
+  {
+    "id": 33,
+    "topic": "D8",
+    "stem": "Constitui atribuição do oficial de justiça prevista no CPC:",
+    "options": [
+      "proferir sentença de mérito",
+      "redigir a contestação do réu",
+      "executar ordens do juiz a que estiver subordinado",
+      "julgar recurso especial",
+      "propor ação em nome do tribunal"
+    ],
+    "answer": 2,
+    "explanation": "O art. 154, I, do CPC prevê executar ordens do juiz.",
+    "law": "CPC, art. 154"
+  },
+  {
+    "id": 34,
+    "topic": "D8",
+    "stem": "A certidão lavrada pelo oficial de justiça após diligência deve, em regra:",
+    "options": [
+      "descrever com fidelidade o que ocorreu",
+      "conter apenas opinião pessoal",
+      "substituir a sentença",
+      "ser sempre verbal",
+      "ser assinada pelo advogado do autor"
+    ],
+    "answer": 0,
+    "explanation": "O registro fiel dos atos praticados integra o dever funcional de certificação; o CPC disciplina certificar o ocorrido.",
+    "law": "CPC, art. 154"
+  },
+  {
+    "id": 35,
+    "topic": "D9",
+    "stem": "A citação no processo civil tem, entre suas funções:",
+    "options": [
+      "impedir defesa do réu",
+      "convocar réu, executado ou interessado para integrar a relação processual",
+      "encerrar automaticamente o processo",
+      "substituir a decisão judicial",
+      "fixar o valor de tributos"
+    ],
+    "answer": 1,
+    "explanation": "Definição do art. 238 do CPC.",
+    "law": "CPC, art. 238"
+  },
+  {
+    "id": 36,
+    "topic": "D9",
+    "stem": "Em regra, as intimações destinam-se a:",
+    "options": [
+      "dar ciência a alguém de atos e termos do processo",
+      "substituir mandado de prisão",
+      "criar uma lei",
+      "apresentar recurso de ofício",
+      "anular a competência do juiz"
+    ],
+    "answer": 0,
+    "explanation": "A intimação é o ato de dar ciência a alguém de atos e termos do processo (CPC, art. 269).",
+    "law": "CPC, art. 269"
+  },
+  {
+    "id": 37,
+    "topic": "D10",
+    "stem": "No CPC, o prazo em dias estabelecido por lei ou pelo juiz para a prática de ato processual, como regra, conta-se:",
+    "options": [
+      "em dias corridos, sempre",
+      "somente em dias úteis",
+      "em meses completos",
+      "sem considerar feriados locais em qualquer caso",
+      "somente em dias pares"
+    ],
+    "answer": 1,
+    "explanation": "Art. 219 do CPC: na contagem de prazo em dias, computam-se apenas os dias úteis, quando se tratar de prazo processual.",
+    "law": "CPC, art. 219"
+  },
+  {
+    "id": 38,
+    "topic": "D10",
+    "stem": "A tutela provisória prevista no CPC pode fundamentar-se em:",
+    "options": [
+      "urgência ou evidência",
+      "mera preferência do servidor",
+      "exclusivamente prova testemunhal",
+      "fato de terceiro sem relação com o processo",
+      "vontade unilateral do cartório"
+    ],
+    "answer": 0,
+    "explanation": "Art. 294 do CPC: tutela provisória pode se fundar em urgência ou evidência.",
+    "law": "CPC, art. 294"
+  },
+  {
+    "id": 39,
+    "topic": "D10",
+    "stem": "O cumprimento de sentença é, em termos gerais, uma fase voltada a:",
+    "options": [
+      "produzir leis",
+      "realizar concretamente obrigação reconhecida no título judicial",
+      "apurar crime de responsabilidade",
+      "cadastrar candidatos de concurso",
+      "substituir a contestação"
+    ],
+    "answer": 1,
+    "explanation": "Cumprimento de sentença busca satisfazer obrigação prevista em título judicial; ver Livro I da Parte Especial do CPC.",
+    "law": "CPC, arts. 513 e seguintes"
+  },
+  {
+    "id": 40,
+    "topic": "D11",
+    "stem": "A República Federativa do Brasil tem como um de seus fundamentos:",
+    "options": [
+      "censura prévia",
+      "dignidade da pessoa humana",
+      "vitaliciedade de todos os servidores",
+      "supressão do voto",
+      "centralização administrativa obrigatória"
+    ],
+    "answer": 1,
+    "explanation": "CF, art. 1º, III.",
+    "law": "CF, art. 1º"
+  },
+  {
+    "id": 41,
+    "topic": "D11",
+    "stem": "Segundo o art. 5º da Constituição, é correto afirmar que:",
+    "options": [
+      "ninguém será obrigado a fazer ou deixar de fazer algo senão em virtude de lei",
+      "todo ato administrativo dispensa motivação",
+      "a manifestação do pensamento é sempre anônima",
+      "o direito de defesa é facultativo apenas ao autor",
+      "ninguém tem acesso ao Judiciário"
+    ],
+    "answer": 0,
+    "explanation": "Princípio da legalidade geral: CF, art. 5º, II.",
+    "law": "CF, art. 5º"
+  },
+  {
+    "id": 42,
+    "topic": "D12",
+    "stem": "A administração pública direta e indireta de qualquer dos Poderes obedecerá, entre outros, ao princípio de:",
+    "options": [
+      "pessoalidade",
+      "sigilo absoluto",
+      "impessoalidade",
+      "irresponsabilidade",
+      "favorecimento"
+    ],
+    "answer": 2,
+    "explanation": "O art. 37 caput da CF reúne legalidade, impessoalidade, moralidade, publicidade e eficiência.",
+    "law": "CF, art. 37"
+  },
+  {
+    "id": 43,
+    "topic": "D12",
+    "stem": "O ingresso em cargo público efetivo, como regra, depende de:",
+    "options": [
+      "indicação de vereador",
+      "aprovação prévia em concurso público",
+      "sorteio entre moradores",
+      "decisão privada de empresa",
+      "aprovação somente em entrevista informal"
+    ],
+    "answer": 1,
+    "explanation": "Regra do concurso público (CF, art. 37, II), ressalvados cargos em comissão e demais casos previstos.",
+    "law": "CF, art. 37, II"
+  },
+  {
+    "id": 44,
+    "topic": "D12",
+    "stem": "De acordo com a Constituição, integram o Poder Judiciário brasileiro:",
+    "options": [
+      "apenas tribunais estaduais",
+      "Supremo Tribunal Federal e Tribunais de Justiça dos Estados, entre outros órgãos",
+      "somente Ministérios Públicos",
+      "todas as assembleias legislativas",
+      "somente tribunais de contas"
+    ],
+    "answer": 1,
+    "explanation": "O art. 92 da CF lista os órgãos do Poder Judiciário, incluindo STF e Tribunais e Juízes dos Estados.",
+    "law": "CF, art. 92"
+  },
+  {
+    "id": 45,
+    "topic": "D13",
+    "stem": "No serviço público, o dever de cumprir ordens superiores:",
+    "options": [
+      "autoriza qualquer ordem, inclusive manifestamente ilegal",
+      "é condicionado à legalidade; ordens manifestamente ilegais não devem ser cumpridas",
+      "afasta toda responsabilidade pessoal",
+      "permite recusa sem justificativa a toda ordem",
+      "vale apenas no expediente externo"
+    ],
+    "answer": 1,
+    "explanation": "O Estatuto paulista contempla dever de cumprir ordens superiores, exceto quando manifestamente ilegais (Lei 10.261/68, art. 241, II).",
+    "law": "Lei SP 10.261/1968, art. 241"
+  },
+  {
+    "id": 46,
+    "topic": "D13",
+    "stem": "Constitui dever funcional relevante à atuação do servidor:",
+    "options": [
+      "guardar sigilo sobre assuntos da repartição quando devido",
+      "divulgar dados sigilosos por interesse pessoal",
+      "usar o cargo para obter vantagens",
+      "omitir sempre informações públicas",
+      "recusar atendimento indistintamente"
+    ],
+    "answer": 0,
+    "explanation": "Os deveres estatutários incluem guardar sigilo sobre assuntos da repartição, nos termos aplicáveis.",
+    "law": "Lei SP 10.261/1968, art. 241"
+  },
+  {
+    "id": 47,
+    "topic": "D13",
+    "stem": "A responsabilidade administrativa por infração funcional:",
+    "options": [
+      "nunca é apurada em procedimento adequado",
+      "é sempre extinta por pedido informal de desculpas",
+      "deve respeitar as garantias legais e o direito de defesa",
+      "pode dispensar lei e motivação",
+      "é fixada por votação popular"
+    ],
+    "answer": 2,
+    "explanation": "A apuração disciplinar deve observar legalidade, devido processo e defesa (CF, art. 5º, LV; Estatuto estadual).",
+    "law": "CF, art. 5º, LV; Lei SP 10.261/1968"
+  },
+  {
+    "id": 48,
+    "topic": "D14",
+    "stem": "Nos termos da Lei de Improbidade Administrativa, constitui núcleo de ato que importa enriquecimento ilícito:",
+    "options": [
+      "auferir vantagem patrimonial indevida em razão do exercício da função pública, mediante ato doloso",
+      "cometer qualquer erro de digitação involuntário",
+      "discordar respeitosamente de um colega",
+      "solicitar férias regulares",
+      "cumprir ordem legal de serviço"
+    ],
+    "answer": 0,
+    "explanation": "O art. 9º da Lei 8.429/1992 descreve o enriquecimento ilícito por vantagem patrimonial indevida em razão de função pública, mediante dolo.",
+    "law": "Lei 8.429/1992, art. 9º"
+  },
+  {
+    "id": 49,
+    "topic": "D15",
+    "stem": "Segundo o Código Civil, a personalidade civil da pessoa começa:",
+    "options": [
+      "com a maioridade",
+      "com o nascimento com vida, resguardados direitos do nascituro",
+      "após emissão do CPF",
+      "no registro de casamento",
+      "aos 16 anos"
+    ],
+    "answer": 1,
+    "explanation": "CC, art. 2º.",
+    "law": "CC, art. 2º"
+  },
+  {
+    "id": 50,
+    "topic": "D15",
+    "stem": "O domicílio da pessoa natural é, em regra:",
+    "options": [
+      "sempre o local do nascimento",
+      "o lugar onde ela estabelece residência com ânimo definitivo",
+      "necessariamente o endereço do empregador",
+      "qualquer lugar escolhido pelo autor da ação",
+      "a capital do Estado"
+    ],
+    "answer": 1,
+    "explanation": "CC, art. 70.",
+    "law": "CC, art. 70"
+  },
+  {
+    "id": 51,
+    "topic": "D15",
+    "stem": "Pelo Código Civil, o negócio jurídico celebrado por pessoa absolutamente incapaz é:",
+    "options": [
+      "sempre plenamente válido",
+      "nulo",
+      "anulável somente após cinco anos",
+      "ato administrativo",
+      "juridicamente obrigatório sem revisão"
+    ],
+    "answer": 1,
+    "explanation": "CC, art. 166, I, estabelece nulidade para negócio celebrado por absolutamente incapaz.",
+    "law": "CC, arts. 3º e 166"
+  },
+  {
+    "id": 52,
+    "topic": "D15",
+    "stem": "Na legislação civil, a posse é caracterizada pelo exercício de fato de algum dos poderes inerentes:",
+    "options": [
+      "ao Ministério Público",
+      "à propriedade",
+      "à competência penal",
+      "à legislatura",
+      "ao orçamento público"
+    ],
+    "answer": 1,
+    "explanation": "CC, art. 1.196: possuidor é quem exerce de fato, pleno ou não, algum dos poderes inerentes à propriedade.",
+    "law": "CC, art. 1.196"
+  },
+  {
+    "id": 53,
+    "topic": "D16",
+    "stem": "Na execução fiscal, a Lei 6.830/1980 prevê, em regra, que o executado seja citado para pagar a dívida ou garantir a execução no prazo de:",
+    "options": [
+      "24 horas",
+      "48 horas",
+      "5 dias",
+      "15 dias",
+      "30 dias"
+    ],
+    "answer": 2,
+    "explanation": "O art. 8º da Lei de Execuções Fiscais prevê o prazo de cinco dias para pagamento ou garantia, observadas suas disposições.",
+    "law": "Lei 6.830/1980, art. 8º"
+  },
+  {
+    "id": 54,
+    "topic": "D16",
+    "stem": "Entre os princípios orientadores dos Juizados Especiais Cíveis, a Lei 9.099/1995 inclui:",
+    "options": [
+      "formalismo máximo e sigilo geral",
+      "oralidade, simplicidade, informalidade, economia processual e celeridade",
+      "ausência absoluta de defesa",
+      "proibição de conciliação",
+      "inexistência de prova documental"
+    ],
+    "answer": 1,
+    "explanation": "Lei 9.099/1995, art. 2º.",
+    "law": "Lei 9.099/1995, art. 2º"
+  },
+  {
+    "id": 55,
+    "topic": "D17",
+    "stem": "Para estudar as rotinas de cumprimento de mandados e certidões no TJ-SP, a fonte institucional mais adequada é:",
+    "options": [
+      "apenas um fórum anônimo de internet",
+      "Normas Judiciais da Corregedoria Geral da Justiça do TJ-SP, observada a versão vigente",
+      "catálogo comercial de móveis",
+      "somente a CLT",
+      "manual de trânsito"
+    ],
+    "answer": 1,
+    "explanation": "As Normas Judiciais da Corregedoria do TJ-SP regulam procedimentos internos e devem ser consultadas na versão vigente.",
+    "law": "Normas Judiciais CGJ/TJ-SP"
+  },
+  {
+    "id": 56,
+    "topic": "G1",
+    "stem": "A Lei Brasileira de Inclusão considera pessoa com deficiência aquela que possui impedimento de longo prazo que, em interação com barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições. Essa definição privilegia:",
+    "options": [
+      "apenas diagnóstico médico",
+      "modelo biopsicossocial e barreiras à participação",
+      "exclusão da pessoa do trabalho",
+      "incapacidade civil automática",
+      "exigência de curatela em todos os casos"
+    ],
+    "answer": 1,
+    "explanation": "A redação corresponde ao art. 2º da Lei 13.146/2015.",
+    "law": "Lei 13.146/2015, art. 2º"
+  },
+  {
+    "id": 57,
+    "topic": "G1",
+    "stem": "Sobre a capacidade civil da pessoa com deficiência, a Lei Brasileira de Inclusão estabelece que:",
+    "options": [
+      "a deficiência afeta, por si só, a plena capacidade civil",
+      "a pessoa com deficiência não pode casar",
+      "a deficiência não afeta a plena capacidade civil da pessoa",
+      "toda pessoa com deficiência depende de tutor",
+      "o voto é proibido a pessoas com deficiência"
+    ],
+    "answer": 2,
+    "explanation": "Art. 6º da LBI: deficiência não afeta plena capacidade civil; curatela é medida extraordinária.",
+    "law": "Lei 13.146/2015, art. 6º"
+  },
+  {
+    "id": 58,
+    "topic": "G1",
+    "stem": "No atendimento de uma pessoa com deficiência em órgão público, é adequada a conduta de:",
+    "options": [
+      "oferecer recursos de acessibilidade e comunicação pertinentes",
+      "recusar atendimento sem justificativa",
+      "impor sempre intermediário",
+      "ignorar barreiras arquitetônicas",
+      "exigir renúncia à autonomia"
+    ],
+    "answer": 0,
+    "explanation": "O atendimento deve respeitar igualdade, acessibilidade e autonomia da pessoa (LBI).",
+    "law": "Lei 13.146/2015, arts. 4º, 8º e 9º"
+  },
+  {
+    "id": 59,
+    "topic": "G2",
+    "stem": "Um candidato acertou 42 de 70 questões. Seu percentual de acertos foi:",
+    "options": [
+      "42%",
+      "50%",
+      "55%",
+      "60%",
+      "70%"
+    ],
+    "answer": 3,
+    "explanation": "42 ÷ 70 × 100 = 60%.",
+    "law": ""
+  },
+  {
+    "id": 60,
+    "topic": "G2",
+    "stem": "Um oficial percorre 120 km em 3 horas, mantendo velocidade média constante. Em 5 horas, percorrerá:",
+    "options": [
+      "160 km",
+      "180 km",
+      "200 km",
+      "220 km",
+      "240 km"
+    ],
+    "answer": 2,
+    "explanation": "120/3 = 40 km/h; em 5 horas, 40 × 5 = 200 km.",
+    "law": ""
+  },
+  {
+    "id": 61,
+    "topic": "G2",
+    "stem": "A média aritmética de 6, 8, 9 e 7 é:",
+    "options": [
+      "7",
+      "7,5",
+      "8",
+      "8,5",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "(6 + 8 + 9 + 7) ÷ 4 = 30 ÷ 4 = 7,5.",
+    "law": ""
+  },
+  {
+    "id": 62,
+    "topic": "G3",
+    "stem": "A negação lógica de “Todos os mandados foram cumpridos” é:",
+    "options": [
+      "Nenhum mandado foi cumprido.",
+      "Todos os mandados não foram cumpridos.",
+      "Pelo menos um mandado não foi cumprido.",
+      "Alguns mandados foram cumpridos.",
+      "Pelo menos um mandado foi cumprido."
+    ],
+    "answer": 2,
+    "explanation": "Negação de ∀x P(x) é ∃x ¬P(x).",
+    "law": ""
+  },
+  {
+    "id": 63,
+    "topic": "G3",
+    "stem": "Se a proposição “Se chove, então a diligência é adiada” é falsa, conclui-se que:",
+    "options": [
+      "chove e a diligência não é adiada",
+      "não chove e a diligência é adiada",
+      "não chove e a diligência não é adiada",
+      "chove e a diligência é adiada",
+      "é impossível saber se chove"
+    ],
+    "answer": 0,
+    "explanation": "Uma implicação P→Q é falsa apenas quando P é verdadeiro e Q é falso.",
+    "law": ""
+  },
+  {
+    "id": 64,
+    "topic": "G3",
+    "stem": "Considere a sequência 2, 5, 10, 17, 26, ... O próximo número é:",
+    "options": [
+      "33",
+      "35",
+      "36",
+      "37",
+      "38"
+    ],
+    "answer": 3,
+    "explanation": "As diferenças são 3, 5, 7, 9; a próxima é 11, logo 26 + 11 = 37.",
+    "law": ""
+  },
+  {
+    "id": 65,
+    "topic": "G3",
+    "stem": "Se todo oficial de justiça é servidor público e alguns servidores públicos trabalham no fórum, pode-se concluir necessariamente que:",
+    "options": [
+      "todos os oficiais trabalham no fórum",
+      "alguns oficiais trabalham no fórum",
+      "nenhum oficial trabalha no fórum",
+      "todos os servidores são oficiais",
+      "nenhuma das quatro conclusões anteriores é necessária"
+    ],
+    "answer": 4,
+    "explanation": "Os conjuntos podem se sobrepor ou não: não é possível determinar o cruzamento entre oficiais e servidores que trabalham no fórum.",
+    "law": ""
+  },
+  {
+    "id": 66,
+    "topic": "G4",
+    "stem": "Em uma planilha eletrônica, qual fórmula soma os valores das células A1 até A5?",
+    "options": [
+      "=SOMA(A1:A5)",
+      "=ADICIONA(A1-A5)",
+      "=TOTALIZAR(A1;A5)",
+      "=SOMA(A1-A5)",
+      "=A1:A5"
+    ],
+    "answer": 0,
+    "explanation": "SOMA com intervalo usando dois-pontos inclui A1, A2, A3, A4 e A5.",
+    "law": ""
+  },
+  {
+    "id": 67,
+    "topic": "G4",
+    "stem": "No Microsoft Word, o recurso usado para criar sumário automaticamente, a partir dos estilos adequados, está associado a:",
+    "options": [
+      "títulos formatados com estilos de título",
+      "somente caixas de texto",
+      "formatação manual de espaços",
+      "alteração do papel para paisagem",
+      "inserção obrigatória de imagem"
+    ],
+    "answer": 0,
+    "explanation": "O sumário automático se baseia nos estilos de título aplicados aos cabeçalhos.",
+    "law": ""
+  },
+  {
+    "id": 68,
+    "topic": "G5",
+    "stem": "No Windows, o atalho Ctrl+C é tradicionalmente utilizado para:",
+    "options": [
+      "colar",
+      "copiar",
+      "excluir definitivamente",
+      "abrir o explorador",
+      "encerrar o sistema"
+    ],
+    "answer": 1,
+    "explanation": "Ctrl+C copia o item selecionado para a área de transferência.",
+    "law": ""
+  },
+  {
+    "id": 69,
+    "topic": "G5",
+    "stem": "Um link recebido por e-mail solicita senha em página desconhecida e com endereço suspeito. A atitude mais segura é:",
+    "options": [
+      "inserir a senha para verificar a conta",
+      "encaminhar o link a todos os colegas",
+      "verificar domínio e acessar o serviço por endereço oficial, sem usar o link suspeito",
+      "desativar as atualizações de segurança",
+      "baixar todos os anexos"
+    ],
+    "answer": 2,
+    "explanation": "Conferir URL e origem ajuda a evitar phishing e roubo de credenciais.",
+    "law": ""
+  },
+  {
+    "id": 70,
+    "topic": "G5",
+    "stem": "Em serviços de nuvem como OneDrive, compartilhar arquivo por link com permissão de edição significa que, conforme a configuração:",
+    "options": [
+      "o destinatário pode modificar o conteúdo",
+      "o arquivo é apagado automaticamente",
+      "ninguém mais poderá visualizá-lo",
+      "a conta inteira se torna pública necessariamente",
+      "não há controle de permissão"
+    ],
+    "answer": 0,
+    "explanation": "Permissão de edição permite alterações por quem tiver acesso, conforme configurações do link e da organização.",
+    "law": ""
+  }
+];
+const REAL_EXAMS=[{"id":"2024","year":2024,"version":1,"n":100,"date":"15/12/2024","location":"Comarca da Capital","time":5,"pdf":"https://dhg1h5j42swfq.cloudfront.net/2024/12/16110000/prova-tj-sp.pdf","keyPdf":"https://documento.vunesp.com.br/documento/stream/NjY1NTEyOQ%3D%3D","ranges":[[1,20,"Língua Portuguesa"],[21,29,"Direito Penal"],[30,38,"Direito Processual Penal"],[39,46,"Direito Processual Civil"],[47,54,"Direito Constitucional"],[55,62,"Direito Administrativo"],[63,70,"Direito Civil"],[71,78,"Legislação Especial"],[79,82,"Atualidades e LBI"],[83,86,"Matemática"],[87,92,"Raciocínio Lógico"],[93,100,"Informática"]],"notice":"Caderno em PDF correspondente ao gabarito oficial versão 1. Confira a versão se utilizar outro caderno.","key":"DBCEABECDDACBEBDACEBBCEADAEBCCADDEBDECEADBDDCAEBCADEABCBDEADCBEDADCBEEAACBDECBDAECABDEBCEDAABBECADEA"},{"id":"2023","year":2023,"version":4,"n":100,"date":"15/10/2023","location":"Interior e Grande SP (10 RAJs)","time":5,"pdf":"https://arquivos.qconcursos.com/prova/arquivo_prova/100311/vunesp-2023-tj-sp-oficial-de-justica-prova.pdf","keyPdf":"https://arquivos.qconcursos.com/prova/arquivo_gabarito/100311/vunesp-2023-tj-sp-oficial-de-justica-gabarito.pdf","ranges":[[1,20,"Língua Portuguesa"],[21,29,"Direito Penal"],[30,40,"Direito Processual Penal"],[41,46,"Direito Processual Civil"],[47,54,"Direito Constitucional"],[55,62,"Direito Administrativo"],[63,70,"Direito Civil"],[71,78,"Legislação Especial"],[79,82,"Atualidades e LBI"],[83,86,"Matemática"],[87,92,"Raciocínio Lógico"],[93,100,"Informática"]],"notice":"Gabarito definitivo versão 4. Questões 49 e 67 anuladas (N): crédito automático na correção.","key":"AEABECAEDADBCEAEBDAACBDECBADDECCBAEDACBDEACBADCENEABBDCEABECDBBADENEBACDCEDABECDACACDAACDDEABACABDDE"},{"id":"2009","year":2009,"version":1,"n":80,"date":"11/10/2009","location":"Capital e interior","time":4,"pdf":"https://www.estudegratis.com.br/images/provas/12265-vunesp-2009-tj-sp-oficial-de-justica-prova.pdf","keyPdf":"https://www.estudegratis.com.br/images/provas/12265-vunesp-2009-tj-sp-oficial-de-justica-gabarito.pdf","ranges":[[1,20,"Língua Portuguesa"],[21,26,"Direito Processual Penal"],[27,35,"Direito Processual Civil"],[36,41,"Direito Penal"],[42,48,"Direito Constitucional"],[49,55,"Direito Administrativo"],[56,60,"Legislação Especial"],[61,64,"Atualidades e LBI"],[65,72,"Matemática"],[73,80,"Informática"]],"notice":"Gabarito oficial divulgado em 14/10/2009. Questões de Direito podem ter legislação superada; conferir a norma vigente. Esta versão não inclui eventual retificação posterior.","key":"CDABECADBEECADBACDBEBEACDEACDADBACEEDBECCDEBCADEDDCBCEAECACDBCADEBACAEDCACEECEBD"}];
+const TOPICS={
+  "P1": {
+    "id": "P1",
+    "subject": "Português",
+    "title": "Interpretação e inferência",
+    "priority": "Essencial",
+    "summary": "Diferencie informação literal, inferência plausível e extrapolação. Observe marcadores de causa, concessão e condições.",
+    "steps": [
+      "Identifique tese, fato e opinião em um texto curto.",
+      "Sublinhe a expressão que justifica sua resposta.",
+      "Treine negação de afirmações universais e inferências."
+    ],
+    "source": "Português — interpretação de textos",
+    "ref": "https://www.vunesp.com.br/TJSP2602"
+  },
+  "P2": {
+    "id": "P2",
+    "subject": "Português",
+    "title": "Coesão e conectivos",
+    "priority": "Alta",
+    "summary": "Pronomes retomam informações; conectivos introduzem relações de conclusão, causa, oposição, condição e concessão.",
+    "steps": [
+      "Construa uma tabela de conectivos por função.",
+      "Treine substituição de “portanto”, “porque” e “embora”.",
+      "Revise referentes de demonstrativos."
+    ],
+    "source": "Português — coesão textual",
+    "ref": "https://www.vunesp.com.br/TJSP2602"
+  },
+  "P3": {
+    "id": "P3",
+    "subject": "Português",
+    "title": "Semântica e figuras",
+    "priority": "Alta",
+    "summary": "Uma palavra pode ter sentido denotativo ou figurado. O significado depende do contexto e das relações semânticas.",
+    "steps": [
+      "Estude sinônimos, antônimos e polissemia.",
+      "Reescreva frases figuradas em linguagem literal.",
+      "Evite trocar palavras preservando só o sentido do dicionário."
+    ],
+    "source": "Português — significação contextual",
+    "ref": "https://www.vunesp.com.br/TJSP2602"
+  },
+  "P4": {
+    "id": "P4",
+    "subject": "Português",
+    "title": "Concordância",
+    "priority": "Alta",
+    "summary": "Concordância verbal relaciona verbo e sujeito; concordância nominal ajusta termos aos nomes. Verbos impessoais merecem atenção.",
+    "steps": [
+      "Revise “haver” no sentido de existir.",
+      "Revise “fazer” com tempo decorrido.",
+      "Treine substantivo + adjetivo e expressões partitivas."
+    ],
+    "source": "Português — concordância",
+    "ref": "https://www.vunesp.com.br/TJSP2602"
+  },
+  "P5": {
+    "id": "P5",
+    "subject": "Português",
+    "title": "Crase e regência",
+    "priority": "Alta",
+    "summary": "A crase resulta normalmente da união de preposição a + artigo a. A regência determina preposição pedida por verbo ou nome.",
+    "steps": [
+      "Teste a troca por substantivo masculino (“ao”).",
+      "Revise assistir (presenciar), obedecer, preferir e informar.",
+      "Separe casos proibidos e facultativos de crase."
+    ],
+    "source": "Português — crase e regência",
+    "ref": "https://www.vunesp.com.br/TJSP2602"
+  },
+  "P6": {
+    "id": "P6",
+    "subject": "Português",
+    "title": "Pontuação",
+    "priority": "Alta",
+    "summary": "A vírgula organiza estruturas sintáticas; não se deve separar sujeito de predicado nem verbo do complemento obrigatório.",
+    "steps": [
+      "Pratique aposto e oração adverbial antecipada.",
+      "Diferencie explicativa de restritiva.",
+      "Corrija frases com vírgula entre sujeito e verbo."
+    ],
+    "source": "Português — pontuação",
+    "ref": "https://www.vunesp.com.br/TJSP2602"
+  },
+  "P7": {
+    "id": "P7",
+    "subject": "Português",
+    "title": "Pronomes e verbos",
+    "priority": "Média",
+    "summary": "Palavras negativas podem exigir próclise; reconheça valores de tempos e modos verbais, especialmente hipótese e condição.",
+    "steps": [
+      "Estude próclise, ênclise e mesóclise.",
+      "Treine futuro do subjuntivo com “se”.",
+      "Revise conectivos e modos indicativo e subjuntivo."
+    ],
+    "source": "Português — classes de palavras",
+    "ref": "https://www.vunesp.com.br/TJSP2602"
+  },
+  "D1": {
+    "id": "D1",
+    "subject": "Direito",
+    "title": "Direito Penal — parte geral",
+    "priority": "Essencial",
+    "summary": "Legalidade, anterioridade, lei no tempo e lugar, modalidades e condições da ação penal. Leia a redação legal com precisão.",
+    "steps": [
+      "Leia CP arts. 1º a 12.",
+      "Compare lei mais benéfica, tempo do crime e lugar do crime.",
+      "Revise extinção da punibilidade nos artigos indicados pelo edital."
+    ],
+    "source": "Código Penal, arts. 1º a 12 e outros selecionados",
+    "ref": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+  },
+  "D2": {
+    "id": "D2",
+    "subject": "Direito",
+    "title": "Crimes contra a Administração",
+    "priority": "Essencial",
+    "summary": "Distinguir peculato, concussão, corrupção passiva e prevaricação é especialmente útil à atividade judiciária.",
+    "steps": [
+      "Construa quadro com os verbos: apropriar, exigir, solicitar/receber, retardar.",
+      "Leia CP arts. 312 a 317 e 319 a 333.",
+      "Associe cada verbo típico a exemplo prático."
+    ],
+    "source": "Código Penal, arts. 312 a 333",
+    "ref": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+  },
+  "D3": {
+    "id": "D3",
+    "subject": "Direito",
+    "title": "Falsidades e fé pública",
+    "priority": "Alta",
+    "summary": "Documentos materialmente falsos e declarações ideologicamente falsas não são a mesma coisa.",
+    "steps": [
+      "Leia CP arts. 293 a 305, 307 e 308.",
+      "Diferencie falsidade documental e ideológica.",
+      "Treine problemas com declaração falsa em documento verdadeiro."
+    ],
+    "source": "Código Penal, arts. 293 a 305",
+    "ref": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+  },
+  "D4": {
+    "id": "D4",
+    "subject": "Direito",
+    "title": "Processual Penal — ação penal",
+    "priority": "Essencial",
+    "summary": "Denúncia, queixa, representação, titularidade e condições de procedibilidade se confundem facilmente.",
+    "steps": [
+      "Leia CPP arts. 24 a 42.",
+      "Monte quadro: ação pública incondicionada, condicionada e privada.",
+      "Pratique quem propõe cada ação e qual peça a inicia."
+    ],
+    "source": "CPP, arts. 24 a 42",
+    "ref": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm"
+  },
+  "D5": {
+    "id": "D5",
+    "subject": "Direito",
+    "title": "Processual Penal — competência e prova",
+    "priority": "Alta",
+    "summary": "A regra territorial é o local da consumação. A prova segue limites constitucionais, contraditório e regras do CPP.",
+    "steps": [
+      "Leia CPP arts. 61 a 74 e 156.",
+      "Diferencie prova judicial, elementos investigativos e provas ilícitas.",
+      "Treine situações de competência territorial."
+    ],
+    "source": "CPP, arts. 61 a 74 e 156",
+    "ref": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm"
+  },
+  "D6": {
+    "id": "D6",
+    "subject": "Direito",
+    "title": "Processual Penal — prisão e citação",
+    "priority": "Essencial",
+    "summary": "Prisão em flagrante, espécies de citação e intimação são temas próximos à atuação do oficial de justiça.",
+    "steps": [
+      "Leia CPP arts. 283 a 303 e 351 a 363.",
+      "Revise a citação pessoal do réu preso.",
+      "Treine quem pode/deve prender em flagrante."
+    ],
+    "source": "CPP, arts. 283 a 303 e 351 a 363",
+    "ref": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm"
+  },
+  "D7": {
+    "id": "D7",
+    "subject": "Direito",
+    "title": "Processo Civil — normas fundamentais",
+    "priority": "Alta",
+    "summary": "Iniciativa da parte, impulso oficial, contraditório, boa-fé, cooperação e fundamentação orientam o CPC.",
+    "steps": [
+      "Leia CPC arts. 1º a 11.",
+      "Diferencie impulso oficial de iniciativa da parte.",
+      "Aplique cooperação e contraditório em cenários."
+    ],
+    "source": "CPC, arts. 1º a 11",
+    "ref": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+  },
+  "D8": {
+    "id": "D8",
+    "subject": "Direito",
+    "title": "CPC — oficial de justiça",
+    "priority": "Essencial",
+    "summary": "Deveres, atos de comunicação e certificação são conteúdo de alto valor para a função.",
+    "steps": [
+      "Leia CPC arts. 149 a 155, especialmente art. 154.",
+      "Anote as funções do oficial de justiça.",
+      "Estude como relatar diligências com objetividade e fidelidade."
+    ],
+    "source": "CPC, arts. 149 a 155",
+    "ref": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+  },
+  "D9": {
+    "id": "D9",
+    "subject": "Direito",
+    "title": "CPC — citação e intimação",
+    "priority": "Essencial",
+    "summary": "Citação convoca para integrar a relação processual; intimação comunica atos e termos processuais.",
+    "steps": [
+      "Leia CPC arts. 238 a 259 e 269 a 275.",
+      "Compare citação e intimação.",
+      "Revise modalidades, requisitos, horários e certidão."
+    ],
+    "source": "CPC, arts. 238 a 259 e 269 a 275",
+    "ref": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+  },
+  "D10": {
+    "id": "D10",
+    "subject": "Direito",
+    "title": "CPC — prazos, tutelas e execução",
+    "priority": "Essencial",
+    "summary": "Treine dias úteis, tutela provisória e atos de cumprimento/execução com atenção às exceções.",
+    "steps": [
+      "Leia CPC arts. 203 a 259, 294 a 311 e 513 e seguintes indicados.",
+      "Resolva problemas simples de contagem de prazos.",
+      "Diferencie cumprimento de sentença e processo de execução."
+    ],
+    "source": "Código de Processo Civil — artigos selecionados",
+    "ref": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+  },
+  "D11": {
+    "id": "D11",
+    "subject": "Direito",
+    "title": "Constitucional — fundamentos e direitos",
+    "priority": "Alta",
+    "summary": "Princípios fundamentais, direitos individuais, direitos sociais, nacionalidade e direitos políticos.",
+    "steps": [
+      "Leia CF arts. 1º a 16.",
+      "Memorize fundamentos do art. 1º e garantias do art. 5º.",
+      "Treine distinções entre direitos e instrumentos de proteção."
+    ],
+    "source": "Constituição Federal, arts. 1º a 16",
+    "ref": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+  },
+  "D12": {
+    "id": "D12",
+    "subject": "Direito",
+    "title": "Constitucional — Administração e Justiça",
+    "priority": "Essencial",
+    "summary": "Princípios da administração, ingresso por concurso e organização judiciária são núcleo frequente de prova.",
+    "steps": [
+      "Leia CF arts. 37 a 41 e 92 a 99, 125, 127 e 134.",
+      "Escreva LIMPE sem consultar.",
+      "Diferencie órgãos do Poder Judiciário de funções essenciais à Justiça."
+    ],
+    "source": "Constituição, arts. 37 a 41 e 92 a 99",
+    "ref": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+  },
+  "D13": {
+    "id": "D13",
+    "subject": "Direito",
+    "title": "Estatuto do servidor paulista",
+    "priority": "Alta",
+    "summary": "Direitos, deveres, proibições e responsabilidade do servidor do Estado de SP.",
+    "steps": [
+      "Leia Lei SP 10.261/1968 nos artigos listados no edital.",
+      "Organize quadro dever × proibição.",
+      "Releia os arts. 241 a 243 e 251."
+    ],
+    "source": "Lei SP 10.261/1968",
+    "ref": "https://www.al.sp.gov.br/repositorio/legislacao/lei/1968/lei-10261-28.10.1968.html"
+  },
+  "D14": {
+    "id": "D14",
+    "subject": "Direito",
+    "title": "Improbidade administrativa",
+    "priority": "Alta",
+    "summary": "Foque enriquecimento ilícito e declaração de bens, e confira as alterações da Lei 14.230/2021.",
+    "steps": [
+      "Leia Lei 8.429/1992, arts. 9º e 13.",
+      "Distinga vantagem patrimonial indevida de irregularidade formal.",
+      "Confira redação vigente antes de decorar sanções."
+    ],
+    "source": "Lei 8.429/1992, arts. 9º e 13",
+    "ref": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm"
+  },
+  "D15": {
+    "id": "D15",
+    "subject": "Direito",
+    "title": "Direito Civil e LINDB",
+    "priority": "Alta",
+    "summary": "Personalidade, capacidade, domicílio, bens, negócio jurídico, posse e outras matérias civis listadas no edital.",
+    "steps": [
+      "Leia CC arts. 1º a 25 e 70 a 103.",
+      "Continue pelos artigos do edital sobre negócios, provas, procuração e posse.",
+      "Revise princípios e vigência das leis na LINDB."
+    ],
+    "source": "Código Civil e LINDB",
+    "ref": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+  },
+  "D16": {
+    "id": "D16",
+    "subject": "Direito",
+    "title": "Legislação especial — execução e juizados",
+    "priority": "Alta",
+    "summary": "Execução fiscal e Juizados Especiais exigem atenção aos prazos e aos princípios próprios.",
+    "steps": [
+      "Leia Lei 6.830/1980, arts. 1º, 2º, 7º, 8º, 11 e 37.",
+      "Leia Lei 9.099/1995, arts. 8º, 9º, 18 e 19.",
+      "Estude Lei 11.608/2003 e Resolução CNJ 354/2020 nos trechos do edital."
+    ],
+    "source": "Lei 6.830/1980, Lei 9.099/1995 e legislação correlata",
+    "ref": "https://www.planalto.gov.br/ccivil_03/leis/l6830.htm"
+  },
+  "D17": {
+    "id": "D17",
+    "subject": "Direito",
+    "title": "Normas da Corregedoria do TJ-SP",
+    "priority": "Essencial",
+    "summary": "O conteúdo é extenso e institucional: cumprimento de mandados, atos e registros. Confira a versão oficial atualizada.",
+    "steps": [
+      "Abra as Normas Judiciais no portal do TJ-SP.",
+      "Estude Tomo I, capítulos e artigos delimitados no edital.",
+      "Registre em fichas o procedimento e o artigo correspondente."
+    ],
+    "source": "Normas Judiciais da CGJ/TJ-SP",
+    "ref": "https://www.tjsp.jus.br/Corregedoria/Comunicados/NormasJudiciais"
+  },
+  "G1": {
+    "id": "G1",
+    "subject": "Conhecimentos gerais",
+    "title": "Atualidades, inclusão e LBI",
+    "priority": "Alta",
+    "summary": "No edital há fatos desde o primeiro semestre de 2026 e artigos selecionados do Estatuto da Pessoa com Deficiência.",
+    "steps": [
+      "Leia LBI arts. 1º a 13, 34 a 38 e 79 a 87.",
+      "Revise acontecimentos políticos, econômicos, sociais e culturais nacionais e internacionais desde jan/2026, em fontes confiáveis.",
+      "Treine atendimento inclusivo, acessibilidade e capacidade civil."
+    ],
+    "source": "Lei 13.146/2015 e notícias desde 2026",
+    "ref": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm"
+  },
+  "G2": {
+    "id": "G2",
+    "subject": "Conhecimentos gerais",
+    "title": "Matemática aplicada",
+    "priority": "Alta",
+    "summary": "Porcentagem, regra de três, médias, juros, equações, tabelas e geometria são problemas diretos.",
+    "steps": [
+      "Treine 10 cálculos percentuais sem calculadora.",
+      "Resolva proporção e média com unidade identificada.",
+      "Inclua juros, equações, tabelas e geometria na revisão."
+    ],
+    "source": "Matemática — edital 2026",
+    "ref": "https://www.vunesp.com.br/TJSP2602"
+  },
+  "G3": {
+    "id": "G3",
+    "subject": "Conhecimentos gerais",
+    "title": "Raciocínio lógico",
+    "priority": "Alta",
+    "summary": "Negação lógica, condicionais, diagramas, relações e sequências exigem rigor de interpretação.",
+    "steps": [
+      "Monte tabelas-verdade de “e”, “ou” e “se… então”.",
+      "Treine negação de “todos” e “alguns”.",
+      "Identifique regras de sequências e resolva diagramas."
+    ],
+    "source": "Raciocínio lógico — edital 2026",
+    "ref": "https://www.vunesp.com.br/TJSP2602"
+  },
+  "G4": {
+    "id": "G4",
+    "subject": "Conhecimentos gerais",
+    "title": "Word e Excel — Microsoft 365",
+    "priority": "Alta",
+    "summary": "Fórmulas e referências de planilha; títulos, sumário, paginação e estilos no editor de textos.",
+    "steps": [
+      "Pratique SOMA, MÉDIA, SE e referências de células.",
+      "Crie um documento com estilos de título e sumário.",
+      "Reveja tabelas, gráficos e formatação."
+    ],
+    "source": "Word e Excel — Microsoft 365",
+    "ref": "https://support.microsoft.com/pt-br"
+  },
+  "G5": {
+    "id": "G5",
+    "subject": "Conhecimentos gerais",
+    "title": "Windows, internet e nuvem",
+    "priority": "Alta",
+    "summary": "Pastas/arquivos, atalhos, e-mail, URLs, Teams e OneDrive, incluindo boas práticas de segurança.",
+    "steps": [
+      "Pratique atalhos do Windows e gestão de arquivos.",
+      "Revise permissões de compartilhamento em OneDrive.",
+      "Identifique phishing, URL legítima, anexos e reuniões no Teams."
+    ],
+    "source": "Windows, Teams, e-mail e OneDrive",
+    "ref": "https://support.microsoft.com/pt-br"
+  }
+};
+const SOURCES=[
+  {name:'Edital e retificações — Vunesp',url:'https://www.vunesp.com.br/TJSP2602',desc:'Documento oficial, cronograma e eventuais atualizações.'},
+  {name:'Edital — publicação TJ-SP',url:'https://www.tjsp.jus.br/Noticias/Noticia?codigoNoticia=115772',desc:'Notícia oficial com link ao edital de abertura.'},
+  {name:'Prova TJ-SP 2024 — Qconcursos',url:'https://www.qconcursos.com/questoes-de-concursos/provas/vunesp-2024-tj-sp-oficial-de-justica',desc:'Caderno anterior e levantamento da incidência de assuntos.'},
+  {name:'Prova TJ-SP 2023 — Qconcursos',url:'https://www.qconcursos.com/questoes-de-concursos/provas/vunesp-2023-tj-sp-oficial-de-justica',desc:'Caderno anterior com correção e comentários, conforme disponibilidade do site.'},
+  {name:'Código de Processo Civil',url:'https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm',desc:'Lei 13.105/2015, versão consolidada.'},
+  {name:'Código Penal',url:'https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm',desc:'Redação atualizada.'},
+  {name:'Código de Processo Penal',url:'https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm',desc:'Decreto-Lei 3.689/1941.'},
+  {name:'Constituição Federal',url:'https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm',desc:'Texto constitucional atualizado.'},
+  {name:'Estatuto dos Servidores de SP',url:'https://www.al.sp.gov.br/repositorio/legislacao/lei/1968/lei-10261-28.10.1968.html',desc:'Lei estadual 10.261/1968.'},
+  {name:'Normas Judiciais da Corregedoria do TJ-SP',url:'https://www.tjsp.jus.br/Corregedoria/Comunicados/NormasJudiciais',desc:'Normas institucionais — conferir atualização.'},
+];
+const DISCS=[
+{title:'Discursiva 1 · Citação e deveres funcionais',topic:'D8',stem:'Explique a finalidade da citação no processo civil, diferencie-a da intimação e indique dois cuidados que o oficial de justiça deve observar ao cumprir e certificar uma diligência, à luz do Código de Processo Civil.',points:['Definir citação segundo o art. 238 do CPC.','Diferenciar da intimação do art. 269 do CPC.','Mencionar cumprimento fiel da ordem e certificação objetiva dos fatos.','Apresentar resposta organizada em introdução, desenvolvimento e conclusão.'],law:'CPC, arts. 154, 238 e 269.'},
+{title:'Discursiva 2 · Ação penal e comunicações',topic:'D4',stem:'Diferencie a ação penal pública da ação penal privada quanto à titularidade e à peça inicial. Em seguida, explique a importância da citação pessoal e do contraditório no processo penal.',points:['Indicar MP e denúncia para a ação pública.','Indicar ofendido/representante e queixa para a ação privada.','Relacionar citação à ciência da acusação e ao exercício de defesa.','Diferenciar enunciados legais de opiniões pessoais.'],law:'CPP, arts. 24, 30, 351 a 363; CF, art. 5º, LV.'}
+];
+const NAV=[['dashboard','◫','Painel'],['trilhas','◈','Guia de estudo'],['reais','★','Provas reais (280)'],['questoes','▣','Questões autorais'],['simulado','◷','Simulado'],['discursiva','✎','Discursivas'],['relatorio','▥','Meu desempenho'],['fontes','↗','Materiais']];
+const KEY='trilha_tjsp_2027_v1';
+let store;
+try{store=JSON.parse(localStorage.getItem(KEY)||'null')}catch{}
+if(!store||typeof store!=='object')store={attempts:[],history:[],studied:{},starred:[],drafts:['',''],sim:null};
+store.attempts ||= [];store.history ||= [];store.studied ||= {};store.starred ||= [];store.drafts ||= ['',''];store.real ||= {};
+let realExamId='2024',realIndex=1,realPdfActive=false,realLocalPdf={}; let view='dashboard';let practice={ids:[],index:0,selected:null,checked:false};let filterSubject='Todos';let filterTopic='Todos';let filterKind='Todos';let showSimReview=false;let timerID=null;
+function save(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch{}}
+const el=id=>document.getElementById(id);
+const esc=t=>String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pct=(a,b)=>b?Math.round(a/b*100):0;
+const qTopic=q=>TOPICS[q.topic];
+const block=q=>q.topic[0]==='P'?'P':q.topic[0]==='D'?'D':'G';
+const bName=b=>({P:'Português',D:'Específicos',G:'Gerais'})[b];
+const colorTag=p=>p==='Essencial'?'gold':p==='Alta'?'blue':'';
+const countTopic=id=>QUESTIONS.filter(q=>q.topic===id).length;
+const lastOf=id=>[...store.attempts].reverse().find(a=>a.id===id);
+function topicStats(id){let arr=store.attempts.filter(a=>QUESTIONS.some(q=>q.id===a.id&&q.topic===id));return {n:arr.length,ok:arr.filter(a=>a.correct).length,score:pct(arr.filter(a=>a.correct).length,arr.length)};}
+function lastPerQuestion(){return QUESTIONS.map(q=>({q,a:lastOf(q.id)}))}
+function stats(){let evaluated=lastPerQuestion().filter(o=>o.a);let ok=evaluated.filter(o=>o.a.correct).length;return {total:store.attempts.length,answered:evaluated.length,correct:ok,accuracy:pct(ok,evaluated.length),studied:Object.values(store.studied).filter(Boolean).length}}
+function scoreBlock(id){let arr=lastPerQuestion().filter(o=>block(o.q)===id&&o.a);return {n:arr.length,correct:arr.filter(o=>o.a.correct).length,score:pct(arr.filter(o=>o.a.correct).length,arr.length)}}
+function recommend(){return Object.values(TOPICS).map(t=>{let s=topicStats(t.id);let due=store.attempts.filter(a=>QUESTIONS.some(q=>q.id===a.id&&q.topic===t.id)&&!a.correct).length;return {...t,...s,rank:(s.n&&s.score<70?100-s.score:0)+(t.priority==='Essencial'?25:t.priority==='Alta'?12:3)+(store.studied[t.id]?0:12)+(due?Math.min(15,due*4):0)}}).sort((a,b)=>b.rank-a.rank||a.title.localeCompare(b.title));}
+function deadline(){const d=new Date('2027-03-14T00:00:00');return Math.max(0,Math.ceil((d-new Date())/86400000))}
+function goto(v){view=v;scrollTo({top:0,behavior:'smooth'});render()}
+function crumb(s){el('crumb').textContent=s}
+function attachButtons(){document.querySelectorAll('[data-to]').forEach(b=>b.onclick=()=>goto(b.dataset.to));document.querySelectorAll('[data-practice-topic]').forEach(b=>b.onclick=()=>startPractice(b.dataset.practiceTopic));document.querySelectorAll('[data-study]').forEach(b=>b.onclick=()=>{store.studied[b.dataset.study]=!store.studied[b.dataset.study];save();render()});document.querySelectorAll('[data-star]').forEach(b=>b.onclick=()=>{let n=+b.dataset.star;store.starred=store.starred.includes(n)?store.starred.filter(x=>x!==n):[...store.starred,n];save();render()})}
+function frame(title,desc,body){el('app').innerHTML=`<h1 class="h1">${title}</h1><p class="sub">${desc}</p>${body}`;attachButtons()}
+function progressBar(num,den){return `<div class="progress"><span style="width:${pct(num,den)}%"></span></div><div class="meterline"><span>${num} de ${den}</span><strong>${pct(num,den)}%</strong></div>`}
+function renderNav(){el('nav').innerHTML=NAV.map(([v,ico,label])=>`<button ${v===view?'class="active" aria-current="page"':''} data-nav="${v}"><span class="icon">${ico}</span>${label}</button>`).join('');document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>goto(b.dataset.nav));el('examcount').textContent=deadline()+' DIAS ATÉ A PROVA'}
+function dashboard(){let s=stats(),rs=recommend(),b=scoreBlock('P'),c=scoreBlock('D'),g=scoreBlock('G');crumb('PAINEL DE PREPARAÇÃO');
+let recommended=rs.slice(0,3).map((r,i)=>`<div class="step"><div class="dot">${i+1}</div><div class="grow"><strong>${esc(r.title)}</strong><p>${r.n?`${r.score}% de acertos em ${r.n} tentativas`: 'Ainda não praticado'} · ${r.priority}</p></div><button class="btn light" data-practice-topic="${r.id}">Praticar</button></div>`).join('');
+frame('Seu próximo passo começa aqui','Um ciclo de aprendizado que mostra o que estudar, aplica exercícios e indica exatamente o que revisar.',
+`<div class="grid"><div class="card c3"><div class="muted small">Questões resolvidas</div><div class="stat">${s.total}</div><div class="stat-caption">Tentativas registradas</div></div><div class="card c3"><div class="muted small">Precisão atual</div><div class="stat">${s.accuracy}%</div><div class="stat-caption">Última resposta por questão</div></div><div class="card c3"><div class="muted small">Assuntos estudados</div><div class="stat">${s.studied}<span class="muted" style="font-size:17px">/${Object.keys(TOPICS).length}</span></div><div class="stat-caption">Checklist do guia</div></div><div class="card c3"><div class="muted small">Até a prova</div><div class="stat">${deadline()}</div><div class="stat-caption">Dias · 14/03/2027</div></div>
+<div class="card c7"><div class="flex"><h3>Plano inteligente de hoje</h3><span class="tag">Atualizado por seus erros</span></div><p class="small">Comece pelos assuntos essenciais ainda não dominados. Após responder, a ordem pode mudar.</p><div class="steps">${recommended}</div><div class="actions space"><button class="btn primary" data-to="trilhas">Abrir meu guia de estudo</button><button class="btn" data-to="questoes">Resolver questões</button></div></div>
+<div class="card c5"><h3>Regras da prova objetiva</h3><div class="barrow"><span>Português</span><div class="track"><span class="fill" style="width:${pct(15,70)}%"></span></div><span class="value">15</span></div><div class="barrow"><span>Específicos</span><div class="track"><span class="fill" style="width:${pct(40,70)}%"></span></div><span class="value">40</span></div><div class="barrow"><span>Gerais</span><div class="track"><span class="fill" style="width:${pct(15,70)}%"></span></div><span class="value">15</span></div><div class="line"></div><p class="small">Meta mínima: <strong style="color:var(--ink)">8 em Português, 20 em Específicos e 35 no total.</strong> Há ainda duas questões discursivas.</p><button class="btn primary space" data-to="simulado">Simular prova de 70 questões</button></div>
+<div class="card c6"><h3>Seu avanço por bloco</h3><p class="small">Questões diferentes já respondidas corretamente na tentativa mais recente.</p>${[['Português',b,15],['Direito',c,40],['Conhecimentos gerais',g,15]].map(([name,z,total])=>`<div style="margin-top:14px"><div class="meterline"><strong>${name}</strong><span>${z.correct}/${total}</span></div>${progressBar(z.correct,total)}</div>`).join('')}</div>
+<div class="card c6"><h3>Ritmo recomendado até março</h3><div class="steps">${[['Etapa 1','Base teórica + 15 questões por dia'],['Etapa 2','Alternar Direito, Português e Gerais'],['Etapa 3','1 simulado semanal + correção de erros'],['Etapa 4','Revisão intensiva e 2 discursivas por semana']].map((x,i)=>`<div class="step"><span class="dot">${i+1}</span><div><strong>${x[0]}</strong><p>${x[1]}</p></div></div>`).join('')}</div></div></div>`)}
+function trilhas(){crumb('ROTEIRO POR DISCIPLINA');let s=stats(),tabs=[['Todos','Todos'],['Português','Português'],['Direito','Direito'],['Conhecimentos gerais','Conhecimentos gerais']];
+let fl=Object.values(TOPICS).filter(t=>filterSubject==='Todos'||t.subject===filterSubject);let html=`<div class="card"><div class="flex"><div><h3>Como usar o guia</h3><p class="small">Leia o resumo, consulte a norma indicada, resolva a questão vinculada e marque como estudado quando concluir. Os erros voltarão ao topo do painel.</p></div><span class="tag">${Object.keys(TOPICS).length} módulos</span></div>${progressBar(s.studied,Object.keys(TOPICS).length)}</div><div class="sectiontitle">Trilhas por assunto</div><div class="selectrow">${tabs.map(([val,label])=>`<button class="btn ${filterSubject===val?'primary':''}" data-fs="${val}">${label}</button>`).join('')}</div><div class="grid">${fl.map(t=>{let z=topicStats(t.id);let done=!!store.studied[t.id];return `<div class="card c6 module"><div class="flex"><span class="tag ${colorTag(t.priority)}">${t.priority}</span><span class="small muted">${countTopic(t.id)} questões</span></div><h3>${esc(t.title)} ${done?'✓':''}</h3><p class="small">${esc(t.summary)}</p><div class="line"></div><strong class="small">O que estudar</strong><ol class="list small">${t.steps.map(x=>`<li>${esc(x)}</li>`).join('')}</ol><a class="small" href="${t.ref}" target="_blank" rel="noopener">↗ ${esc(t.source)}</a><div class="meterline"><span>${z.n?`${z.score}% de acertos · ${z.n} tentativas`:'Ainda não praticado'}</span><span>${done?'Estudado':'Pendente'}</span></div><div class="module buttons"><button class="btn primary" data-practice-topic="${t.id}">Exercitar agora</button><button class="btn light" data-study="${t.id}">${done?'↺ Desmarcar':'✓ Marcar estudado'}</button></div></div>`}).join('')}</div><div class="note space"><strong>Conteúdo do edital além destas questões:</strong> o banco é inicial e não substitui o Anexo VIII. Para cada disciplina, cumpra todos os artigos selecionados do edital e confira as atualizações normativas até a prova. As trilhas acima destacam assuntos e não afirmam a frequência exata de cada tema em 2027.</div>`;
+frame('Guia de estudos orientado por questões','Cada módulo ensina o ponto central, aponta a leitura recomendada e abre seus exercícios correspondentes.',html);document.querySelectorAll('[data-fs]').forEach(b=>b.onclick=()=>{filterSubject=b.dataset.fs;render()})}
+function getPracticeItems(){return QUESTIONS.filter(q=>filterKind==='Errei anteriormente'?lastOf(q.id)&&!lastOf(q.id).correct:filterKind==='Favoritas'?store.starred.includes(q.id):true).filter(q=>filterSubject==='Todos'||qTopic(q).subject===filterSubject).filter(q=>filterTopic==='Todos'||q.topic===filterTopic)}
+function startPractice(topic){view='questoes';filterKind='Todos';if(topic&&TOPICS[topic]){filterTopic=topic;filterSubject=TOPICS[topic].subject}else if(!topic){filterTopic='Todos';filterSubject='Todos'}practice={ids:getPracticeItems().map(q=>q.id),index:0,selected:null,checked:false};render();scrollTo({top:0,behavior:'smooth'})}
+function questionCard(q,choice,checked,mode){let choiceAnswer=checked?choice:null;let tags=`<span class="tag ${colorTag(qTopic(q).priority)}">${esc(qTopic(q).title)}</span><span class="tag blue">${bName(block(q))}</span>`;let answers=q.options.map((o,i)=>`<div role="radio" aria-checked="${choice===i}" tabindex="0" data-option="${i}" class="answer ${choice===i?'selected':''} ${checked&&i===q.answer?'correct':''} ${checked&&i===choice&&i!==q.answer?'incorrect':''}" aria-disabled="${checked}"><b>${'ABCDE'[i]}</b><span>${esc(o)}</span></div>`).join('');let hint=checked?`<div class="note ${choice===q.answer?'success':'error'}"><h4>${choice===q.answer?'✓ Resposta correta':'✕ Resposta incorreta'} · Gabarito ${'ABCDE'[q.answer]}</h4><p>${esc(q.explanation)}</p><p class="small"><strong>Revisar:</strong> ${esc(qTopic(q).summary)}</p><a class="link" href="${qTopic(q).ref}" target="_blank" rel="noopener">Abrir leitura recomendada ↗</a></div>`:'';return `<div class="flex" style="align-items:flex-start"><div>${tags}</div><button class="btn light" data-star="${q.id}" aria-label="Favoritar questão">${store.starred.includes(q.id)?'★ Favorita':'☆ Favoritar'}</button></div><h2 class="qa">${esc(q.stem)}</h2><div role="radiogroup" aria-label="Alternativas">${answers}</div>${hint}`}
+function questoes(){crumb('PRÁTICA COM CORREÇÃO');if(!practice.ids.length){practice.ids=getPracticeItems().map(q=>q.id);practice.index=0;practice.selected=null;practice.checked=false}
+let topicsList=Object.values(TOPICS).filter(t=>filterSubject==='Todos'||t.subject===filterSubject),q=QUESTIONS.find(x=>x.id===practice.ids[practice.index]);
+let select=`<div class="selectrow"><select class="field" id="selectSubject" aria-label="Disciplina"><option value="Todos">Todas as disciplinas</option>${['Português','Direito','Conhecimentos gerais'].map(s=>`<option value="${s}" ${filterSubject===s?'selected':''}>${s}</option>`).join('')}</select><select class="field" id="selectTopic" aria-label="Assunto"><option value="Todos">Todos os assuntos</option>${topicsList.map(t=>`<option value="${t.id}" ${filterTopic===t.id?'selected':''}>${esc(t.title)}</option>`).join('')}</select><select class="field" id="selectKind" aria-label="Tipo de treino">${['Todos','Errei anteriormente','Favoritas'].map(x=>`<option ${filterKind===x?'selected':''}>${x}</option>`).join('')}</select><button class="btn" id="applyFilters">Aplicar filtro</button></div>`;
+let inner=q?`<div class="card"><div class="flex"><span class="small muted">Questão ${practice.index+1} de ${practice.ids.length} · Banco autoral</span><span class="small muted">${store.attempts.length} tentativas acumuladas</span></div>${progressBar(practice.index+1,practice.ids.length)}<div class="line"></div>${questionCard(q,practice.selected,practice.checked,'practice')}<div class="actions space"><button class="btn primary" id="checkAnswer" ${practice.selected===null||practice.checked?'disabled':''}>${practice.checked?'Resposta conferida':'Conferir resposta'}</button><button class="btn" id="nextAnswer">${practice.index===practice.ids.length-1?'Recomeçar ciclo':'Próxima questão →'}</button><button class="btn light" id="prevAnswer" ${practice.index===0?'disabled':''}>← Voltar</button></div></div>`:`<div class="card"><h3>Nenhuma questão neste filtro</h3><p>Responda outras questões primeiro ou selecione outra matéria.</p></div>`;
+frame('Banco de questões comentadas','Escolha o tema, marque uma alternativa e confira a explicação antes de continuar.',select+inner);
+el('selectSubject').onchange=e=>{filterSubject=e.target.value;filterTopic='Todos';practice.ids=[];render()};el('selectTopic').onchange=e=>{filterTopic=e.target.value;practice.ids=[];render()};el('selectKind').onchange=e=>{filterKind=e.target.value;practice.ids=[];render()};el('applyFilters').onclick=()=>{practice={ids:getPracticeItems().map(x=>x.id),index:0,selected:null,checked:false};render()};
+if(!q)return;
+document.querySelectorAll('[data-option]').forEach(b=>{b.onclick=()=>{if(practice.checked)return;practice.selected=+b.dataset.option;render()};b.onkeydown=e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();b.click()}}});
+el('checkAnswer').onclick=()=>{if(practice.selected===null||practice.checked)return;practice.checked=true;store.attempts.push({id:q.id,choice:practice.selected,correct:practice.selected===q.answer,time:new Date().toISOString()});save();render()};
+el('nextAnswer').onclick=()=>{practice.index=(practice.index+1)%practice.ids.length;practice.selected=null;practice.checked=false;render()};el('prevAnswer').onclick=()=>{if(practice.index>0){practice.index--;practice.selected=null;practice.checked=false;render()}}
+}
+function startSim(){store.sim={created:new Date().toISOString(),started:Date.now(),answers:{},idx:0,discs:['','']};showSimReview=false;save();render()}
+function simRemaining(){return Math.max(0,5*3600-Math.floor((Date.now()-store.sim.started)/1000))}
+function timerText(n){return [Math.floor(n/3600),Math.floor(n%3600/60),n%60].map(x=>('0'+x).slice(-2)).join(':')}
+function simIndexList(){return Array.from({length:72},(_,i)=>{let label=i<70?i+1:'D'+(i-69),ans=i<70?store.sim.answers[i]!==undefined:!!store.sim.discs[i-70];return `<button class="${ans?'done':''} ${store.sim.idx===i?'current':''}" title="${i<70?'Questão '+(i+1):'Discursiva '+(i-69)}" data-sim-index="${i}">${label}</button>`}).join('')}
+function simResultHtml(h){let total=h.answers.filter((x,i)=>x===QUESTIONS[i].answer).length;let parts=['P','D','G'].map(b=>{let idxs=QUESTIONS.map((q,i)=>({q,i})).filter(o=>block(o.q)===b);let ok=idxs.filter(o=>h.answers[o.i]===o.q.answer).length;return {b,ok,len:idxs.length}});let passed=total>=35&&parts[0].ok>=8&&parts[1].ok>=20;let weak=QUESTIONS.map((q,i)=>({q,i,correct:h.answers[i]===q.answer})).filter(o=>!o.correct);let weakBy={};weak.forEach(o=>weakBy[o.q.topic]=(weakBy[o.q.topic]||0)+1);let topics=Object.entries(weakBy).sort((a,b)=>b[1]-a[1]);return `<div class="grid"><div class="card c4"><div class="muted small">Nota objetiva</div><div class="stat">${total}<span class="muted" style="font-size:18px"> / 70</span></div><div class="stat-caption">${pct(total,70)}% de acertos</div><span class="tag ${passed?'':'red'}">${passed?'Mínimos objetivos atingidos':'Abaixo de algum mínimo'}</span></div>${parts.map(p=>`<div class="card c${p.b==='P'?4:p.b==='D'?4:4}"><div class="muted small">${bName(p.b)}</div><div class="stat">${p.ok}<span class="muted" style="font-size:18px"> / ${p.len}</span></div>${progressBar(p.ok,p.len)}${p.b==='P'||p.b==='D'?`<div class="stat-caption">Mínimo: ${p.b==='P'?8:20}</div>`:''}</div>`).join('')}</div><div class="note space"><strong>Leitura correta do resultado:</strong> atingir os mínimos da objetiva não garante classificação nem correção da discursiva. As duas respostas discursivas precisam ser avaliadas por pessoa, pela rubrica do edital.</div><div class="grid space"><div class="card c6"><h3>Prioridades de revisão (${weak.length} questões erradas ou em branco)</h3>${topics.length?topics.slice(0,7).map(([id,n])=>`<div class="step" style="padding:8px 0"><div class="dot">${n}</div><div class="grow"><strong>${esc(TOPICS[id].title)}</strong><p>${esc(TOPICS[id].summary)}</p></div><button class="btn light" data-practice-topic="${id}">Revisar</button></div>`).join(''):'<p>Você acertou todas as objetivas!</p>'}</div><div class="card c6"><h3>Correção das questões objetivas</h3><div style="max-height:480px;overflow:auto">${QUESTIONS.map((q,i)=>{let right=h.answers[i]===q.answer;return `<div style="padding:9px 0;border-bottom:1px solid var(--line)"><div class="flex"><strong class="small">${i+1}. ${esc(TOPICS[q.topic].title)}</strong><span class="tag ${right?'':'red'}">${right?'✓':'✗'} ${h.answers[i]===null?'Em branco':'Marcada '+('ABCDE'[h.answers[i]])} · ${'ABCDE'[q.answer]}</span></div>${!right?`<p class="small muted">${esc(q.explanation)}</p>`:''}</div>`}).join('')}</div></div></div>`}
+function finishSim(){if(!store.sim)return;let sim=store.sim;let answers=QUESTIONS.map((q,i)=>sim.answers[i]===undefined?null:sim.answers[i]);store.history.unshift({date:new Date().toISOString(),answers:answers,discs:sim.discs,duration:Math.floor((Date.now()-sim.started)/1000)});store.history=store.history.slice(0,30);QUESTIONS.forEach((q,i)=>{store.attempts.push({id:q.id,choice:answers[i],correct:answers[i]===q.answer,time:new Date().toISOString(),sim:true})});store.sim=null;showSimReview=true;save();render()}
+function simulado(){crumb('SIMULADO DO EDITAL 01/2026');let sim=store.sim;
+if(!sim){let h=store.history[0];frame('Simulado completo · 70 + 2','70 questões inéditas no estilo de treino da Vunesp, com dois temas discursivos e tempo total sugerido de 5 horas.',`${h?`<div class="card space"><h3>Último simulado · ${new Date(h.date).toLocaleDateString('pt-BR')}</h3>${simResultHtml(h)}</div>`:''}<div class="grid"><div class="card c7"><h3>Como funciona</h3><div class="steps">${[['1','70 alternativas','15 de Português, 40 de Direito e 15 de Gerais.'],['2','Duas discursivas','Rascunhos salvos; autoavaliação pela rubrica de conteúdo.'],['3','5 horas totais','O cronômetro cobre objetivas e discursivas, como treinamento.'],['4','Diagnóstico completo','Correção, cortes por bloco e sugestão de revisão.']].map(([n,t,d])=>`<div class="step"><div class="dot">${n}</div><div><strong>${t}</strong><p>${d}</p></div></div>`).join('')}</div><button class="btn primary space" id="startSim">Iniciar simulado agora</button></div><div class="card c5"><h3>Critérios objetivos</h3><p>Português: <strong>pelo menos 8/15</strong></p><p>Conhecimentos específicos: <strong>20/40</strong></p><p>Total: <strong>35/70</strong></p><div class="line"></div><p class="small">O resultado é indicativo. A discursiva exige correção humana e há regras de classificação para ter a prova corrigida.</p><div class="note small">Não há questões reais copiadas dos cadernos; o banco é autoral e foi criado para treino.</div></div></div>`);el('startSim').onclick=startSim;return}
+if(simRemaining()<=0){finishSim();return}
+let i=sim.idx,disc=i>=70,d=i-70,q=QUESTIONS[i],choice=sim.answers[i],answered=Object.keys(sim.answers).length;let top=`<div class="card"><div class="flex"><div><span class="tag gold" id="sTimer">⏳ ${timerText(simRemaining())}</span><span class="tag">${answered}/70 objetivas respondidas</span></div><button class="btn" id="finishSim">Encerrar e corrigir</button></div><div class="progress"><span style="width:${pct(answered,70)}%"></span></div><div class="qindex">${simIndexList()}</div></div>`;
+let content=!disc?`<div class="card space"><div class="flex"><span class="muted small">Questão ${i+1} de 70 · ${bName(block(q))}</span><span class="small muted">Sem correção durante o simulado</span></div><h2 class="qa">${esc(q.stem)}</h2>${q.options.map((o,j)=>`<div tabindex="0" role="radio" aria-checked="${choice===j}" class="answer ${choice===j?'selected':''}" data-sim-option="${j}"><b>${'ABCDE'[j]}</b><span>${esc(o)}</span></div>`).join('')}</div>`:`<div class="card space"><span class="tag">Discursiva ${d+1} de 2</span><h2 class="qa">${esc(DISCS[d].title)}</h2><p class="disc">${esc(DISCS[d].stem)}</p><p class="small muted">Elabore uma resposta clara, objetiva e fundamentada. Não há correção automática deste campo.</p><textarea class="textarea" id="simDisc" placeholder="Escreva sua resposta...">${esc(sim.discs[d]||'')}</textarea><p class="small muted" id="discWordCount"></p></div>`;
+frame('Simulado em andamento','O tempo está correndo. Você pode navegar pelas questões e salvar respostas automaticamente.',top+content+`<div class="actions space"><button class="btn" id="simPrev" ${i===0?'disabled':''}>← Anterior</button><button class="btn primary" id="simNext">${i===71?'Concluir e corrigir':'Próxima →'}</button><button class="btn light" id="simClear" ${disc||choice===undefined?'disabled':''}>Limpar resposta</button></div>`);
+document.querySelectorAll('[data-sim-index]').forEach(b=>b.onclick=()=>{store.sim.idx=+b.dataset.simIndex;save();render()});document.querySelectorAll('[data-sim-option]').forEach(b=>{b.onclick=()=>{store.sim.answers[i]=+b.dataset.simOption;save();render()};b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();b.click()}}});
+if(disc){el('simDisc').oninput=e=>{store.sim.discs[d]=e.target.value;save();el('discWordCount').textContent=e.target.value.trim()?e.target.value.trim().split(/\s+/).length+' palavras':'0 palavras'};el('simDisc').dispatchEvent(new Event('input'))}
+el('simPrev').onclick=()=>{store.sim.idx=Math.max(0,i-1);save();render()};el('simNext').onclick=()=>{if(i===71){if(confirm('Encerrar simulado e conferir as 70 questões?'))finishSim()}else{store.sim.idx=i+1;save();render()}};el('simClear').onclick=()=>{delete store.sim.answers[i];save();render()};el('finishSim').onclick=()=>{if(confirm('Deseja encerrar agora? Respostas em branco contarão como erradas.'))finishSim()};
+}
+function discursiva(){crumb('TREINO DE DISCURSIVA');frame('Discursivas com roteiro de correção','Pratique a argumentação jurídica em dois temas autorais baseados no programa. As respostas não recebem nota automática.',`<div class="note">Na prova oficial, as duas discursivas integram uma avaliação eliminatória. Este espaço salva seus rascunhos localmente e oferece critérios de conferência; não substitui avaliação humana.</div>${DISCS.map((d,i)=>`<div class="card space"><span class="tag gold">Questão discursiva ${i+1}</span><h3 style="font-size:20px;margin-top:9px">${esc(d.title)}</h3><p class="disc">${esc(d.stem)}</p><textarea class="textarea" id="draft${i}" placeholder="Elabore sua resposta aqui...">${esc(store.drafts[i]||'')}</textarea><div class="flex"><span class="small muted" id="wcount${i}">0 palavras</span><button class="btn light" data-toggle-rubric="${i}">Ver critérios de conferência</button></div><div class="note hide" id="rubric${i}"><h4>Itens de conteúdo esperados</h4><ol>${d.points.map(x=>`<li>${esc(x)}</li>`).join('')}</ol><p class="small">Base: ${esc(d.law)}. Avalie também coesão, objetividade, precisão e uso correto dos termos.</p></div></div>`).join('')}`);DISCS.forEach((d,i)=>{el('draft'+i).oninput=e=>{store.drafts[i]=e.target.value;save();el('wcount'+i).textContent=e.target.value.trim()?e.target.value.trim().split(/\s+/).length+' palavras':'0 palavras'};el('draft'+i).dispatchEvent(new Event('input'))});document.querySelectorAll('[data-toggle-rubric]').forEach(b=>b.onclick=()=>el('rubric'+b.dataset.toggleRubric).classList.toggle('hide'))}
+function report(){crumb('DESEMPENHO E REVISÃO');let s=stats(),rec=recommend(),hist=store.history;frame('Diagnóstico do seu aprendizado','O relatório usa suas respostas registradas e recomenda revisão prioritária dos pontos com dificuldade.',`<div class="grid"><div class="card c4"><div class="muted small">Tentativas acumuladas</div><div class="stat">${s.total}</div><p class="small">Inclui questões respondidas nos simulados.</p></div><div class="card c4"><div class="muted small">Questões diferentes respondidas</div><div class="stat">${s.answered}<span class="muted" style="font-size:17px">/70</span></div><p class="small">Última resposta por questão.</p></div><div class="card c4"><div class="muted small">Precisão mais recente</div><div class="stat">${s.accuracy}%</div><p class="small">Não é previsão de nota oficial.</p></div><div class="card c7"><h3>Precisão por assunto</h3>${rec.filter(x=>x.n).sort((a,b)=>a.score-b.score).map(t=>`<div class="barrow"><span title="${esc(t.title)}">${esc(t.title.length>22?t.title.slice(0,20)+'…':t.title)}</span><div class="track"><span class="fill" style="width:${t.score}%"></span></div><span class="value">${t.score}%</span></div>`).join('')||'<p>Responda questões para gerar seu relatório.</p>'}</div><div class="card c5"><h3>Minhas prioridades</h3><div class="steps">${rec.slice(0,8).map((r,i)=>`<div class="step"><span class="dot">${i+1}</span><div class="grow"><strong>${esc(r.title)}</strong><p>${r.n?r.score+'% de acertos':'Sem tentativas'} · ${r.priority}</p></div><button class="btn light" data-practice-topic="${r.id}">Rever</button></div>`).join('')}</div></div><div class="card space"><div class="flex"><div><h3>Histórico de simulados</h3><p class="small">${hist.length} simulado(s) salvo(s) neste aparelho.</p></div><button class="btn" id="exportData">Exportar progresso .json</button></div>${hist.slice(0,10).map((h,i)=>{let ok=h.answers.filter((x,j)=>x===QUESTIONS[j].answer).length;return `<div class="source"><span class="n">${i+1}</span><div class="grow"><strong>${new Date(h.date).toLocaleString('pt-BR')}</strong><p class="small">${ok}/70 acertos (${pct(ok,70)}%) · ${timerText(h.duration||0)} de duração</p></div></div>`}).join('')||'<p>Seu histórico começará após o primeiro simulado concluído.</p>'}</div><div class="card space"><h3>Gerenciar seus dados</h3><p class="small">Sem login e sem servidor. O progresso fica no armazenamento local deste navegador e pode ser exportado e reimportado.</p><div class="actions space"><button class="btn" id="exportAgain">Exportar JSON</button><label class="btn" for="importFile" style="cursor:pointer">Importar JSON</label><input type="file" id="importFile" accept="application/json" class="hide"><button class="btn warn" id="resetData">Apagar meu progresso</button></div></div>`);
+const exportFn=()=>{let blob=new Blob([JSON.stringify({...store,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='progresso-tjsp-2027.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};el('exportData').onclick=exportFn;el('exportAgain').onclick=exportFn;el('importFile').onchange=e=>{let file=e.target.files[0];if(!file)return;let reader=new FileReader();reader.onload=()=>{try{let data=JSON.parse(reader.result);if(!Array.isArray(data.attempts)||!Array.isArray(data.history))throw Error('Formato incorreto');if(confirm('Substituir os dados deste navegador pelo arquivo importado?')){store={attempts:data.attempts,history:data.history,studied:data.studied||{},starred:data.starred||[],drafts:data.drafts||['',''],real:data.real||{},sim:null};save();render()}}catch{alert('Não foi possível importar este arquivo de progresso.')}};reader.readAsText(file)};el('resetData').onclick=()=>{if(confirm('Apagar TODO o progresso, simulados e rascunhos deste navegador? Esta ação não pode ser desfeita.')){store={attempts:[],history:[],studied:{},starred:[],drafts:['',''],sim:null};save();render()}}}
+function fontes(){crumb('FONTES E PROVAS HISTÓRICAS');frame('Materiais de estudo confiáveis','Use a leitura direta da legislação, o edital vigente e as provas antigas como referência de estilo.',`<div class="grid"><div class="card c7"><h3>Documentos e leis</h3>${SOURCES.map((s,i)=>`<div class="source"><span class="n">${('0'+(i+1)).slice(-2)}</span><div><a href="${s.url}" target="_blank" rel="noopener"><strong>${esc(s.name)} ↗</strong></a><p class="small">${esc(s.desc)}</p></div></div>`).join('')}</div><div class="card c5"><h3>O que aprender nas provas antigas</h3><div class="steps"><div class="step"><span class="dot">24</span><div><strong>2024</strong><p>Interpretação, CPC/CPP, Penal e informática apareceram com destaque. Observe a linguagem da banca.</p></div></div><div class="step"><span class="dot">23</span><div><strong>2023</strong><p>Resolver o caderno com o gabarito definitivo; há anulações a observar.</p></div></div><div class="step"><span class="dot">09</span><div><strong>2009</strong><p>Útil para treinar a prova; cuidado com artigos revogados ou modificados desde então.</p></div></div></div><div class="note small">O edital de 2026 alterou a estrutura em relação a 2024: agora são 70 objetivas e duas discursivas. O banco desta plataforma contém questões <strong>autorais</strong>, não transcrições das provas antigas.</div></div></div>`)}
+
+const REAL_STUDY={
+'Língua Portuguesa':['P1','P2','P3','P4','P5','P6','P7'],
+'Direito Penal':['D1','D2','D3'],
+'Direito Processual Penal':['D4','D5','D6'],
+'Direito Processual Civil':['D7','D8','D9','D10'],
+'Direito Constitucional':['D11','D12'],
+'Direito Administrativo':['D13','D14'],
+'Direito Civil':['D15'],
+'Legislação Especial':['D16','D17'],
+'Atualidades e LBI':['G1'],
+'Matemática':['G2'],
+'Raciocínio Lógico':['G3'],
+'Informática':['G4','G5']
+};
+function realState(e){store.real[e.id] ||= {answers:{},tags:{},startedAt:null,corrected:false,finishedAt:null};let r=store.real[e.id];r.answers ||= {};r.tags ||= {};return r}
+function realGroup(e,n){let r=e.ranges.find(([a,b])=>n>=a&&n<=b);return r?r[2]:'Assunto não classificado'}
+function realScore(e){let r=realState(e),ans=r.answers;let counted=0,good=0,voids=0,group={};for(let i=1;i<=e.n;i++){let k=e.key[i-1],g=realGroup(e,i);group[g] ||= {total:0,answered:0,right:0};group[g].total++;if(k==='N'){voids++;good++;group[g].right++;continue}if(ans[i]){counted++;group[g].answered++}if(ans[i]===k){good++;group[g].right++}}return {good,counted,voids,group,percent:Math.round(good*100/e.n)}}
+function realStatsSummary(){let reviewed=REAL_EXAMS.filter(e=>realState(e).corrected),answered=REAL_EXAMS.reduce((acc,e)=>acc+Object.keys(realState(e).answers).filter(k=>+k>=1&&+k<=e.n).length,0),credits=reviewed.reduce((acc,e)=>acc+realScore(e).good,0);return {reviewed:reviewed.length,answered,credits}}
+function realExamSelect(){return `<div class="selectrow"><select class="real-select" id="realPick" aria-label="Prova oficial">${REAL_EXAMS.map(e=>`<option value="${e.id}" ${e.id===realExamId?'selected':''}>TJ-SP ${e.year} · versão ${e.version} · ${e.n} questões</option>`).join('')}</select></div>`}
+function realDashboardHtml(){let st=realStatsSummary();return `<div class="card space"><div class="flex"><div><span class="tag gold">BANCO REAL · VUNESP</span><h3 style="margin:10px 0 5px">280 questões oficiais, com gabarito</h3><p class="small">Cadernos de 2024, 2023 e 2009; respostas e diagnóstico por disciplina. ${st.answered} respostas marcadas em provas anteriores.</p></div><button class="btn primary" data-open-real="2024">Resolver provas reais →</button></div><div class="flex">${REAL_EXAMS.map(e=>{let r=realState(e),n=Object.keys(r.answers).length;return `<button class="btn light" data-open-real="${e.id}">${e.year} · ${n}/${e.n} ${r.corrected?'✓':''}</button>`}).join('')}</div></div>`}
+function realReportHtml(){let reviewed=REAL_EXAMS.filter(e=>realState(e).corrected);let groups={};reviewed.forEach(e=>{let r=realScore(e);Object.entries(r.group).forEach(([group,v])=>{groups[group]||={total:0,right:0};groups[group].total+=v.total;groups[group].right+=v.right})});let sorted=Object.entries(groups).sort((a,b)=>(a[1].right/a[1].total)-(b[1].right/b[1].total));return `<div class="card space"><div class="flex"><div><h3>Questões oficiais · diagnóstico por matéria</h3><p class="small">${reviewed.length} prova(s) corrigida(s). A revisão está agrupada por disciplina; marque o subtema da questão na própria prova para obter orientações mais precisas.</p></div><button class="btn primary" data-open-real="2024">Praticar provas reais</button></div>${reviewed.length?`<div class="real-report-list">${sorted.map(([g,v])=>{let perc=Math.round(v.right*100/v.total);return `<div class="real-chip"><strong>${esc(g)}</strong><p class="small">${v.right}/${v.total} · ${perc}%</p><div class="progress"><span style="width:${perc}%"></span></div><div class="actions" style="margin-top:7px">${(REAL_STUDY[g]||[]).slice(0,3).map(id=>`<button class="btn light" data-real-study="${id}">${esc(TOPICS[id].title.length>19?TOPICS[id].title.slice(0,18)+'…':TOPICS[id].title)}</button>`).join('')}</div></div>`}).join('')}</div>`:'<p>Corrija ao menos uma prova oficial para receber o diagnóstico.</p>'}</div>`}
+function realAttachOverview(where){el('app').insertAdjacentHTML('beforeend',where==='dashboard'?realDashboardHtml():realReportHtml());document.querySelectorAll('[data-open-real]').forEach(b=>b.onclick=()=>{realExamId=b.dataset.openReal;realIndex=1;goto('reais')});document.querySelectorAll('[data-real-study]').forEach(b=>b.onclick=()=>startPractice(b.dataset.realStudy))}
+function realPdfUrl(e){return realLocalPdf[e.id]||e.pdf}
+function realPage(){let e=REAL_EXAMS.find(x=>x.id===realExamId)||REAL_EXAMS[0],r=realState(e),sc=realScore(e);crumb('CADERNOS OFICIAIS · VUNESP');let pdf=`<div class="card"><div class="flex"><h3>Enunciado original</h3><span class="tag blue">PDF da banca</span></div><p class="small">Leia a questão <b id="realPdfNum">${realIndex}</b> no caderno original. O documento é preservado em PDF para manter textos, gráficos e figuras.</p><div class="flex"><a class="real-link" href="${e.pdf}" target="_blank" rel="noopener noreferrer">Abrir prova original ↗</a><a class="real-link" href="${e.keyPdf}" target="_blank" rel="noopener noreferrer">Ver gabarito ↗</a></div><label class="btn light" for="realPdfFile" style="cursor:pointer;display:inline-flex">Carregar PDF baixado no dispositivo</label><input class="hide" type="file" id="realPdfFile" accept="application/pdf"><div class="flex space"><button class="btn light" id="realToggle">${realPdfActive?'Ocultar':'Exibir'} caderno aqui</button><span class="small muted">Se não abrir no celular, use “Abrir prova original”.</span></div><div id="realPdfWrap" ${realPdfActive?'':'class="hide"'}><iframe id="realPdfFrame" class="real-pdf" title="Caderno original de ${e.year}" loading="lazy" src="${realPdfActive?esc(realPdfUrl(e))+'#page=3':''}"></iframe><div class="actions space"><button class="btn light" id="realPdfPrev">Página anterior</button><label class="small" for="realPdfPage">Página PDF</label><input class="field" id="realPdfPage" type="number" min="1" max="80" value="3" style="max-width:85px"><button class="btn light" id="realPdfGo">Ir à página</button><button class="btn light" id="realPdfNext">Próxima página</button></div></div></div>`;let box=`<div class="card"><div class="flex"><div><h3>Folha de respostas</h3><p class="small">${Object.keys(r.answers).length}/${e.n} respondidas</p></div><span id="realTimer" class="tag">${r.startedAt&&!r.corrected?Math.floor((Date.now()-r.startedAt)/60000)+' min decorridos':r.corrected?'Corrigida':'Cronômetro ao responder'}</span></div><div class="progress"><span style="width:${Math.round(Object.keys(r.answers).length*100/e.n)}%"></span></div><div class="real-answer-grid" id="realAnswerGrid">${Array.from({length:e.n},(_,i)=>`<button type="button" class="real-num" data-real-index="${i+1}">${i+1}</button>`).join('')}</div><div id="realQuestion"></div><div class="actions space"><button class="btn light" id="realPrev">← Anterior</button><button class="btn primary" id="realNext">Próxima →</button></div><div class="actions space">${r.corrected?`<button class="btn" id="realRevise">Refazer prova</button><button class="btn primary" id="realReview">Ver análise no relatório</button>`:`<button class="btn primary" id="realFinish">Encerrar e corrigir prova</button><button class="btn light" id="realClearAll">Recomeçar do zero</button>`}</div><p class="small muted">${esc(e.notice)}</p></div>`;let summary=r.corrected?`<div class="card space"><h3>Resultado oficial · TJ-SP ${e.year}</h3><div class="real-result"><span class="tag gold">${sc.good}/${e.n} pontos</span><span class="tag">${sc.percent}% de aproveitamento</span><span class="tag">${sc.voids} anulada(s)</span></div><p class="small">O resultado utiliza apenas o gabarito correspondente ao caderno informado. Questões anuladas contam ponto para todos. Não corresponde à nota nem à classificação do concurso atual.</p></div>`:'';frame('Provas reais · 2024, 2023 e 2009','Leia cada questão original no PDF, responda A–E, confira o gabarito oficial e receba um roteiro de revisão por matéria.',`<div class="note"><strong>280 questões oficiais</strong> + 70 questões autorais na aba “Questões autorais”. As provas históricas não têm necessariamente os mesmos conteúdos ou regras do edital de 2026.</div>${realExamSelect()}<p class="small"><b>${e.location}</b> · ${e.date} · versão ${e.version} · duração da prova: ${e.time}h</p>${summary}<div class="real-layout">${pdf}${box}</div><div class="note space"><strong>Como estudar:</strong> leia a questão no PDF; marque sua resposta aqui; ao concluir, veja as disciplinas com mais erros e clique nas trilhas recomendadas. Se o visor interno for bloqueado pelo site, abra o PDF em outra aba.</div>`);el('realPick').onchange=x=>{realExamId=x.target.value;realIndex=1;render()};el('realPrev').onclick=()=>realUpdate(Math.max(1,realIndex-1));el('realNext').onclick=()=>realUpdate(Math.min(e.n,realIndex+1));document.querySelectorAll('[data-real-index]').forEach(b=>b.onclick=()=>realUpdate(+b.dataset.realIndex));el('realToggle').onclick=()=>{realPdfActive=!realPdfActive;let wrap=el('realPdfWrap');wrap.classList.toggle('hide',!realPdfActive);el('realToggle').textContent=(realPdfActive?'Ocultar':'Exibir')+' caderno aqui';if(realPdfActive)el('realPdfFrame').src=realPdfUrl(e)+'#page='+el('realPdfPage').value};el('realPdfFile').onchange=ev=>{let f=ev.target.files[0];if(!f)return;if(!/pdf/i.test(f.type)&&!f.name.toLowerCase().endsWith('.pdf')){alert('Selecione um PDF.');return}if(realLocalPdf[e.id])URL.revokeObjectURL(realLocalPdf[e.id]);realLocalPdf[e.id]=URL.createObjectURL(f);realPdfActive=true;el('realPdfWrap').classList.remove('hide');el('realToggle').textContent='Ocultar caderno aqui';el('realPdfFrame').src=realLocalPdf[e.id]+'#page=3'};let changePdf=n=>{n=Math.max(1,Math.min(80,n||3));el('realPdfPage').value=n;if(realPdfActive)el('realPdfFrame').src=realPdfUrl(e)+'#page='+n};el('realPdfPrev').onclick=()=>changePdf(+el('realPdfPage').value-1);el('realPdfNext').onclick=()=>changePdf(+el('realPdfPage').value+1);el('realPdfGo').onclick=()=>changePdf(+el('realPdfPage').value);if(!r.corrected){el('realFinish').onclick=()=>{if(!Object.keys(r.answers).length){alert('Responda ao menos uma questão antes de corrigir.');return}if(confirm('Corrigir agora? Respostas em branco serão consideradas erradas; questões anuladas recebem crédito.')){r.corrected=true;r.finishedAt=Date.now();save();render()}};el('realClearAll').onclick=()=>{if(confirm('Apagar as respostas desta prova?')){r.answers={};r.corrected=false;r.startedAt=null;r.finishedAt=null;save();render()}}}else{el('realRevise').onclick=()=>{if(confirm('Reabrir a prova para praticar novamente? As respostas atuais permanecerão marcadas até que você as altere.')){r.corrected=false;r.startedAt=null;save();render()}};el('realReview').onclick=()=>goto('relatorio')}realUpdate(realIndex)}
+function realUpdate(n){let e=REAL_EXAMS.find(x=>x.id===realExamId),r=realState(e),sc=realScore(e);realIndex=n;let g=realGroup(e,n),key=e.key[n-1],ans=r.answers[n],chosen=r.tags[n]||'';document.querySelectorAll('[data-real-index]').forEach(b=>{let j=+b.dataset.realIndex,was=r.answers[j],correct=e.key[j-1];b.className='real-num'+(j===n?' sel':'')+(r.corrected?(correct==='N'?' void':correct===was?' right':' wrong'):was?' answered':'')});let modules=REAL_STUDY[g]||[],isVoid=key==='N';el('realQuestion').innerHTML=`<div class="real-section"><div class="flex"><strong>Questão ${n} / ${e.n}</strong><span class="tag blue">${esc(g)}</span></div><p class="small">Leia o enunciado ${n} e suas alternativas no PDF ao lado; marque a resposta abaixo.</p><div class="real-answer-buttons">${'ABCDE'.split('').map(x=>`<button class="real-choice ${ans===x?'selected':''} ${r.corrected&&key===x?'correct':''} ${r.corrected&&ans===x&&key!==x?'incorrect':''}" type="button" data-real-answer="${x}" ${r.corrected?'disabled':''}>${x}</button>`).join('')}</div>${r.corrected?`<div class="note space">${isVoid?'<b>Questão anulada:</b> ponto creditado independentemente da resposta.':`<b>Gabarito oficial: ${key}.</b> ${ans===key?'Você acertou.':ans?'Você marcou '+ans+'. Revise a disciplina abaixo.':'Em branco. Confira o enunciado antes de revisar.'}`}</div>`:''}<label class="small muted" for="realTopicSelect">Assunto específico (opcional: melhora o diagnóstico)</label><select class="real-select" id="realTopicSelect"><option value="">Não classificado dentro da disciplina</option>${modules.map(id=>`<option value="${id}" ${chosen===id?'selected':''}>${esc(TOPICS[id].title)}</option>`).join('')}</select><div class="small muted" style="margin:12px 0 5px">Estude estes módulos da trilha atual:</div><div class="actions">${modules.map(id=>`<button class="btn light" data-real-topic="${id}">${esc(TOPICS[id].title)}</button>`).join('')}</div></div>`;document.querySelectorAll('[data-real-answer]').forEach(b=>b.onclick=()=>{if(r.corrected)return;r.answers[n]=b.dataset.realAnswer;if(!r.startedAt)r.startedAt=Date.now();save();realUpdate(n)});el('realTopicSelect').onchange=ev=>{if(ev.target.value)r.tags[n]=ev.target.value;else delete r.tags[n];save()};document.querySelectorAll('[data-real-topic]').forEach(b=>b.onclick=()=>startPractice(b.dataset.realTopic));let found=el('realPdfNum');if(found)found.textContent=n}
+
+function render(){if(timerID){clearInterval(timerID);timerID=null}renderNav();({dashboard,trilhas,questoes,simulado,discursiva,relatorio:report,fontes,reais:realPage}[view])();if(view==='dashboard')realAttachOverview('dashboard');if(view==='relatorio')realAttachOverview('relatorio');if(view==='reais'){timerID=setInterval(()=>{let t=el('realTimer');if(t){let e=REAL_EXAMS.find(x=>x.id===realExamId),r=realState(e);t.textContent=r.startedAt&&!r.corrected?Math.floor((Date.now()-r.startedAt)/60000)+' min decorridos':r.corrected?'Prova corrigida':'Cronômetro inicia na 1ª resposta'}},20000)}if(view==='simulado'&&store.sim){timerID=setInterval(()=>{let tm=el('sTimer');if(tm)tm.textContent='⏳ '+timerText(simRemaining());if(simRemaining()<=0){clearInterval(timerID);finishSim()}},1000)}}
+render();
+</script><script>if('serviceWorker' in navigator && location.protocol==='https:'){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}</script></body></html>
