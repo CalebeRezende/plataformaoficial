@@ -20,7 +20,7 @@ const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648
 const prefixo = nome;
 const cont = [0, 0, 0, 0, 0];
 banco.forEach(q => cont[q.a]++);
-let seq = banco.reduce((m, q) => Math.max(m, +q.id.split('-')[1] || 0), 0);
+let seq = banco.reduce((m, q) => Math.max(m, +q.id.split('-').pop() || 0), 0);
 const vistos = new Set(banco.map(q => q.s));
 
 for (const q of novas) {
@@ -40,6 +40,7 @@ for (const q of novas) {
   seq++; cont[a]++;
   banco.push({ id: `${prefixo}-${String(seq).padStart(4, '0')}`, t: q.t, n: q.n || 2, s: q.s, o, a, e: q.e || '', l: q.l || '' });
 }
+if (new Set(banco.map(q => q.id)).size !== banco.length) throw new Error('IDs duplicados no banco ' + nome);
 fs.writeFileSync(destino, JSON.stringify(banco));
 
 // Atualiza o índice usado pelo site.

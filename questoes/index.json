@@ -3,31 +3,31 @@
  "arquivos": [
   {
    "arquivo": "administrativo-civil.json",
-   "total": 30
+   "total": 60
   },
   {
    "arquivo": "constitucional.json",
-   "total": 30
+   "total": 56
   },
   {
    "arquivo": "gerais.json",
-   "total": 36
+   "total": 73
   },
   {
    "arquivo": "penal.json",
-   "total": 30
+   "total": 60
   },
   {
    "arquivo": "portugues.json",
-   "total": 30
+   "total": 55
   },
   {
    "arquivo": "processo-civil.json",
-   "total": 62
+   "total": 99
   },
   {
    "arquivo": "processo-penal.json",
-   "total": 38
+   "total": 70
   }
  ]
 }
