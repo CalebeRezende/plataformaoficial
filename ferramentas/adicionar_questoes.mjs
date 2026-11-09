@@ -13,7 +13,7 @@ const dir = path.join(raiz, 'questoes');
 const destino = path.join(dir, nome + '.json');
 const banco = fs.existsSync(destino) ? JSON.parse(fs.readFileSync(destino, 'utf8')) : [];
 const novas = JSON.parse(fs.readFileSync(src, 'utf8'));
-const TOPICOS = /^(P[1-7]|D([1-9]|1[0-7])|G[1-5])$/;
+const TOPICOS = /^(P[1-7]|D([1-9]|1[0-9]|2[0-2])|G[1-5])$/;
 
 let seed = banco.length * 7919 + 17;
 const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;

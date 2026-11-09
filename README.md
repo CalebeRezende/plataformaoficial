@@ -33,7 +33,7 @@ Guia com mais detalhes: [PUBLICAR_NO_GITHUB.md](PUBLICAR_NO_GITHUB.md).
 
 1. Crie um arquivo JSON com as questões novas. A alternativa **correta deve ser a primeira**:
    `[{"t": "D9", "n": 2, "s": "Enunciado…", "o": ["certa", "errada", "errada", "errada", "errada"], "e": "Comentário", "l": "CPC, art. 252"}]`
-   (`t` = código do assunto, como P1–P7, D1–D17 ou G1–G5; `n` = nível, 1 médio e 2 difícil.)
+   (`t` = código do assunto, como P1–P7, D1–D22 ou G1–G5; `n` = nível, 1 médio e 2 difícil.)
 2. Rode `node ferramentas/adicionar_questoes.mjs novas.json processo-civil` (o segundo argumento é o arquivo de destino em `questoes/`).
 3. Faça commit da pasta `questoes/`.
 
