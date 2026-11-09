@@ -1,0 +1,33 @@
+{
+ "atualizado": "2026-11-09",
+ "arquivos": [
+  {
+   "arquivo": "administrativo-civil.json",
+   "total": 30
+  },
+  {
+   "arquivo": "constitucional.json",
+   "total": 30
+  },
+  {
+   "arquivo": "gerais.json",
+   "total": 36
+  },
+  {
+   "arquivo": "penal.json",
+   "total": 30
+  },
+  {
+   "arquivo": "portugues.json",
+   "total": 30
+  },
+  {
+   "arquivo": "processo-civil.json",
+   "total": 62
+  },
+  {
+   "arquivo": "processo-penal.json",
+   "total": 38
+  }
+ ]
+}

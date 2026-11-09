@@ -1,6 +1,6 @@
-// Interface e questões disponíveis offline após a primeira visita.
+// Interface e banco de questões disponíveis offline após a primeira visita.
 // Os cadernos em PDF das provas reais ficam nos sites de origem e exigem internet.
-const VERSION = 'tjsp-2027-v2';
+const VERSION = 'tjsp-2027-v3';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png'];
 const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 
@@ -24,11 +24,11 @@ self.addEventListener('fetch', event => {
   const sameOrigin = url.origin === self.location.origin;
   if (!sameOrigin && !FONT_HOSTS.includes(url.hostname)) return;
 
-  // Páginas: rede primeiro (sempre a versão mais nova), cache como reserva offline.
-  if (req.mode === 'navigate') {
+  // Páginas e banco de questões: rede primeiro (sempre a versão mais nova), cache como reserva offline.
+  if (req.mode === 'navigate' || (sameOrigin && url.pathname.includes('/questoes/'))) {
     event.respondWith(fetch(req)
       .then(res => { if (res.ok) { const copy = res.clone(); caches.open(VERSION).then(c => c.put(req, copy)); } return res; })
-      .catch(() => caches.match(req).then(r => r || caches.match('./index.html'))));
+      .catch(() => caches.match(req, { ignoreSearch: true }).then(r => r || (req.mode === 'navigate' ? caches.match('./index.html') : Response.error()))));
     return;
   }
 
