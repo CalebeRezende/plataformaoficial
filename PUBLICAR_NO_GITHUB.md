@@ -31,7 +31,7 @@ Crie primeiro o repositório vazio no GitHub e substitua `SEU-USUARIO` e o nome 
 - Em **Questões autorais**, as alternativas devem aparecer diretamente.
 - Em **Provas reais**, selecione 2024, 2023 ou 2009; abra o PDF original e responda na folha de respostas.
 - Em **Meu desempenho**, exporte um JSON para guardar um backup dos seus resultados.
-- Os arquivos `.json` em `dados/` já estão preenchidos, e os mesmos dados já estão incorporados ao `index.html`.
+- Todos os dados (questões, provas e gabaritos) já estão incorporados ao `index.html`.
 
 ### Dúvidas comuns
 
