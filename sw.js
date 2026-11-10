@@ -1,8 +1,8 @@
 // Interface e banco de questões disponíveis offline após a primeira visita.
 // Os cadernos em PDF das provas reais ficam nos sites de origem e exigem internet.
-const VERSION = 'tjsp-2027-v4';
+const VERSION = 'tjsp-2027-v5';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png', './firebase-config.js'];
-const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
+const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com', 'www.gstatic.com'];
 
 self.addEventListener('install', event => {
   // Cada arquivo é cacheado individualmente: a falta de um não impede a instalação.
