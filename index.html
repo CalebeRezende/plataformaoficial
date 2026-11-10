@@ -240,6 +240,11 @@ input[type=checkbox]{accent-color:var(--accent);width:15px;height:15px}
 .modal-box{width:min(960px,100%);background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5)}
 .modal-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 18px}
 .modal-head strong{font-size:14px}
+.sync-pill{cursor:pointer;background:var(--surface);transition:border-color .15s}
+.sync-pill:hover{border-color:var(--line-2)}
+.sync-pill .av{width:20px;height:20px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:11px;font-weight:700;margin-left:-4px;background-size:cover}
+.sync-dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.sync-dot.ok{background:var(--ok)}.sync-dot.busy{background:var(--warn)}.sync-dot.err{background:var(--bad)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:13.5px;font-weight:600;opacity:0;pointer-events:none;transition:all .25s;z-index:50;box-shadow:0 10px 30px rgba(0,0,0,.3)}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 
@@ -287,6 +292,7 @@ input[type=checkbox]{accent-color:var(--accent);width:15px;height:15px}
       <div class="eyebrow" id="crumb">Preparação para o concurso</div>
       <div class="topright">
         <span class="pill"><span class="live"></span><span id="examcount">—</span></span>
+        <button class="pill sync-pill" id="syncBtn" type="button"></button>
         <button class="iconbtn" id="themeBtn" aria-label="Alternar tema claro/escuro" title="Alternar tema"></button>
       </div>
     </div>
@@ -333,7 +339,7 @@ function normalize(){if(!store||typeof store!=='object')store=freshStore();let f
 normalize();
 let view='dashboard',realExamId=store.prefs.realExam||'2024',realIndex=1;
 let practice={ids:[],index:0,selected:null,checked:false},filterSubject='Todos',filterTopic='Todos',filterKind='Todos',filterLevel='Todos',timerID=null,keyHandler=null;
-function save(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch{}}
+function save(opts){if(!(opts&&opts.silent))store.updatedAt=Date.now();try{localStorage.setItem(KEY,JSON.stringify(store))}catch{}if(!(opts&&opts.silent)&&window.Sync)window.Sync.schedule()}
 const el=id=>document.getElementById(id);
 const $$=s=>document.querySelectorAll(s);
 const esc=t=>String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -475,10 +481,10 @@ frame('Diagnóstico do seu aprendizado','O relatório usa suas respostas registr
 <div class="card c5"><h3>Minhas prioridades</h3><div class="steps">${rec.slice(0,7).map((r,i)=>`<div class="step"><span class="dot">${i+1}</span><div class="grow"><strong>${esc(r.title)}</strong><p>${r.n?r.score+'% de acertos':'Sem tentativas'} · ${r.priority}</p></div><button class="btn ghost sm" data-practice-topic="${r.id}">Rever</button></div>`).join('')}</div></div>
 </div>
 <div class="card space"><h3>Histórico de simulados</h3><p class="small">${plural(hist.length,'simulado salvo','simulados salvos')} neste aparelho.</p>${hist.slice(0,10).map((h,i)=>{let n=h.ids?h.ids.length:70,ok=h.score??0;return `<div class="source"><span class="n">${i+1}</span><div class="grow"><strong>${new Date(h.date).toLocaleString('pt-BR')}</strong><p class="small">${h.score==null?'Banco antigo':`${ok}/${n} acertos (${pct(ok,n)}%)`} · duração ${timerText(h.duration||0)}</p></div></div>`}).join('')}</div>
-<div class="card space"><h3>Seus dados</h3><p class="small">Sem login e sem servidor: o progresso fica neste navegador. Exporte o arquivo para levar a outro aparelho.</p><div class="actions space"><button class="btn" id="exportData">Exportar progresso</button><label class="btn" for="importFile">Importar progresso</label><input type="file" id="importFile" accept="application/json,.json" class="hide"><span class="grow"></span><button class="btn danger" id="resetData">Apagar meu progresso</button></div></div>`);
-el('exportData').onclick=()=>{let blob=new Blob([JSON.stringify({...store,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='progresso-tjsp-2027.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+<div class="card space" id="syncCard">${syncCardHtml()}</div><div class="card space"><h3>Seus dados</h3><p class="small">Além da sincronização, você pode exportar o progresso em arquivo, como cópia de segurança.</p><div class="actions space"><button class="btn" id="exportData">Exportar progresso</button><label class="btn" for="importFile">Importar progresso</label><input type="file" id="importFile" accept="application/json,.json" class="hide"><span class="grow"></span><button class="btn danger" id="resetData">Apagar meu progresso</button></div></div>`);
+attachSyncCard();el('exportData').onclick=()=>{let blob=new Blob([JSON.stringify({...store,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='progresso-tjsp-2027.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
 el('importFile').onchange=e=>{let file=e.target.files[0];if(!file)return;let reader=new FileReader();reader.onload=()=>{try{let data=JSON.parse(reader.result);if(!Array.isArray(data.attempts)||!Array.isArray(data.history))throw Error();if(confirm('Substituir os dados deste navegador pelo arquivo importado?')){store={...freshStore(),...data,sim:null};delete store.exportedAt;normalize();save();render();toast('Progresso importado')}}catch{alert('Não foi possível importar este arquivo de progresso.')}};reader.readAsText(file)};
-el('resetData').onclick=()=>{if(confirm('Apagar TODO o progresso, provas, simulados e rascunhos deste navegador? Esta ação não pode ser desfeita.')){store=freshStore();save();render();toast('Progresso apagado')}}}
+el('resetData').onclick=()=>{if(confirm('Apagar TODO o progresso, provas, simulados e rascunhos deste navegador? Esta ação não pode ser desfeita.')){store=freshStore();store.resetAt=Date.now();save();render();toast('Progresso apagado')}}}
 
 /* ---------- Materiais ---------- */
 function fontes(){crumb('Fontes e provas históricas');frame('Materiais de estudo','Leia a legislação na fonte, acompanhe o edital vigente e use as provas antigas como referência de estilo da banca.',`<div class="grid"><div class="card c7"><h3>Documentos e leis</h3>${SOURCES.map((s,i)=>`<div class="source"><span class="n">${String(i+1).padStart(2,'0')}</span><div><a href="${esc(s.url)}" target="_blank" rel="noopener"><strong>${esc(s.name)} ↗</strong></a><p class="small">${esc(s.desc)}</p></div></div>`).join('')}</div><div class="card c5"><h3>Cadernos oficiais</h3><div class="steps">${REAL_EXAMS.map(e=>`<div class="step"><span class="dot">${String(e.year).slice(2)}</span><div class="grow"><strong>TJ-SP ${e.year} · versão ${e.version}</strong><p><a href="${esc(e.pdf)}" target="_blank" rel="noopener">Prova ↗</a> · <a href="${esc(e.keyPdf)}" target="_blank" rel="noopener">Gabarito ↗</a></p></div><button class="btn ghost sm" data-open-real="${e.id}">Resolver</button></div>`).join('')}</div><div class="note small">O edital de 2026 mudou a estrutura em relação a 2024: agora são 70 objetivas e duas discursivas. Em provas antigas, confira se a legislação ainda está vigente.</div></div></div>`)}
@@ -515,12 +521,12 @@ const swap=ev=>{ev&&ev.preventDefault();store.prefs.viewer=google?'nativo':'goog
 if(!google){const setPage=n=>{n=Math.max(1,Math.min(120,n||1));el('pgInput').value=n;(store.prefs.pdfPage ||= {})[e.id]=n;save();el('realPdfFrame').src=realPdfSrc(e)};el('pgPrev').onclick=()=>setPage(+el('pgInput').value-1);el('pgNext').onclick=()=>setPage(+el('pgInput').value+1);el('pgInput').onchange=()=>setPage(+el('pgInput').value);el('pgInput').onkeydown=ev=>{if(ev.key==='Enter')setPage(+el('pgInput').value)}}
 $$('[data-real-index]').forEach(b=>b.onclick=()=>realUpdate(+b.dataset.realIndex));
 if(!r.corrected){el('autoNext').onchange=ev=>{store.prefs.autoNext=ev.target.checked;save()};
-el('realFinish').onclick=()=>{let n=Object.keys(r.answers).length;if(!n){alert('Responda ao menos uma questão antes de corrigir.');return}if(confirm(`Corrigir agora? ${e.n-n?plural(e.n-n,'questão em branco será considerada errada','questões em branco serão consideradas erradas')+'; ':''}anuladas recebem crédito.`)){r.corrected=true;r.finishedAt=Date.now();save();render();window.scrollTo({top:0,behavior:'smooth'})}};
-el('realClearAll').onclick=()=>{if(confirm('Apagar as respostas desta prova?')){store.real[e.id]={};save();realIndex=1;render()}}}
-else{el('realRevise').onclick=()=>{if(confirm('Reabrir a prova para praticar de novo? As respostas atuais continuam marcadas até você alterá-las.')){r.corrected=false;r.startedAt=null;save();render()}};el('realReview').onclick=()=>goto('relatorio')}
+el('realFinish').onclick=()=>{let n=Object.keys(r.answers).length;if(!n){alert('Responda ao menos uma questão antes de corrigir.');return}if(confirm(`Corrigir agora? ${e.n-n?plural(e.n-n,'questão em branco será considerada errada','questões em branco serão consideradas erradas')+'; ':''}anuladas recebem crédito.`)){r.corrected=true;r.finishedAt=Date.now();r.updatedAt=Date.now();save();render();window.scrollTo({top:0,behavior:'smooth'})}};
+el('realClearAll').onclick=()=>{if(confirm('Apagar as respostas desta prova?')){store.real[e.id]={updatedAt:Date.now()};save();realIndex=1;render()}}}
+else{el('realRevise').onclick=()=>{if(confirm('Reabrir a prova para praticar de novo? As respostas atuais continuam marcadas até você alterá-las.')){r.corrected=false;r.startedAt=null;r.updatedAt=Date.now();save();render()}};el('realReview').onclick=()=>goto('relatorio')}
 keyHandler=ev=>{let k=ev.key.toUpperCase();if(k.length===1&&L.includes(k)&&!r.corrected)realMark(k);else if(ev.key==='ArrowRight')realUpdate(Math.min(e.n,realIndex+1));else if(ev.key==='ArrowLeft')realUpdate(Math.max(1,realIndex-1))};
 loadPdf(e);realUpdate(Math.min(realIndex,e.n),true)}
-function realMark(x){let e=REAL_EXAMS.find(v=>v.id===realExamId),r=realState(e),n=realIndex;if(r.corrected)return;if(r.answers[n]===x)delete r.answers[n];else r.answers[n]=x;if(!r.startedAt)r.startedAt=Date.now();save();let answered=Object.keys(r.answers).length;let p=document.querySelector('.sheet .progress>span');if(p)p.style.width=pct(answered,e.n)+'%';el('realCount').textContent=`${answered}/${e.n} respondidas`;el('realClearAll').disabled=!answered;
+function realMark(x){let e=REAL_EXAMS.find(v=>v.id===realExamId),r=realState(e),n=realIndex;if(r.corrected)return;if(r.answers[n]===x)delete r.answers[n];else r.answers[n]=x;if(!r.startedAt)r.startedAt=Date.now();r.updatedAt=Date.now();save();let answered=Object.keys(r.answers).length;let p=document.querySelector('.sheet .progress>span');if(p)p.style.width=pct(answered,e.n)+'%';el('realCount').textContent=`${answered}/${e.n} respondidas`;el('realClearAll').disabled=!answered;
 if(r.answers[n]&&store.prefs.autoNext!==false&&n<e.n){realUpdate(n,false,x);setTimeout(()=>realUpdate(n+1),220)}else realUpdate(n)}
 function realUpdate(n,initial,flash){let e=REAL_EXAMS.find(x=>x.id===realExamId),r=realState(e);realIndex=n;r.last=n;let g=realGroup(e,n),key=e.key[n-1],ans=r.answers[n],isVoid=key==='N',modules=REAL_STUDY[g]||[];
 $$('[data-real-index]').forEach(b=>{let j=+b.dataset.realIndex,was=r.answers[j],k=e.key[j-1];b.className='real-num'+(j===n?' sel':'')+(r.corrected?(k==='N'?' void':k===was?' right':' wrong'):was?' answered':'')});
@@ -549,13 +555,88 @@ ${topics.map(t=>{let z=topicStats(t.id);return `<section class="vsection" id="vt
 <p class="xs muted space">Os vídeos são de canais públicos do YouTube, sem vínculo com esta plataforma. Confira sempre a legislação atualizada.</p>`);
 $$('[data-vs]').forEach(b=>b.onclick=()=>{videoSubject=b.dataset.vs;render()});attachVideos();if(videoFocus){let sec=el('vt-'+videoFocus);videoFocus=null;if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'})}}
 
+/* ---------- Sincronização entre dispositivos ---------- */
+function mergeStores(local,remote){
+ if(!remote)return local;if(!local)return remote;
+ const lu=local.updatedAt||0,ru=remote.updatedAt||0;
+ const newer=lu>=ru?local:remote,older=newer===local?remote:local;
+ // Um "apagar progresso" mais recente que a última alteração do outro lado prevalece.
+ if((newer.resetAt||0)>(older.updatedAt||0)&&(newer.resetAt||0)>=(older.resetAt||0))return {...newer,prefs:local.prefs||{}};
+ if((older.resetAt||0)>(newer.updatedAt||0))return {...older,prefs:local.prefs||{}};
+ const out={...older,...newer};
+ const am=new Map;[...(older.attempts||[]),...(newer.attempts||[])].forEach(a=>am.set(a.id+'|'+a.time,a));out.attempts=[...am.values()].sort((a,b)=>a.time<b.time?-1:a.time>b.time?1:0);
+ const hm=new Map;[...(older.history||[]),...(newer.history||[])].forEach(h=>hm.set(h.date,h));out.history=[...hm.values()].sort((a,b)=>a.date<b.date?1:-1).slice(0,30);
+ out.studied={...(older.studied||{}),...(newer.studied||{})};
+ out.watched={...(older.watched||{}),...(newer.watched||{})};
+ out.real={};for(const k of new Set([...Object.keys(older.real||{}),...Object.keys(newer.real||{})])){let x=(older.real||{})[k],y=(newer.real||{})[k];out.real[k]=!x?y:!y?x:((x.updatedAt||0)>(y.updatedAt||0)?x:y)}
+ out.prefs=local.prefs||{};out.updatedAt=Math.max(lu,ru);out.resetAt=Math.max(local.resetAt||0,remote.resetAt||0)||undefined;
+ return out}
+function applyRemote(merged){const typing=document.activeElement&&/^(TEXTAREA|INPUT|SELECT)$/.test(document.activeElement.tagName);store=merged;normalize();save({silent:true});if(!typing)render();else renderNav()}
+window.App={get store(){return store},merge:mergeStores,apply:applyRemote,onSyncChange(){renderSync()},toast};
+function syncInfo(){const S=window.Sync;if(!window.FIREBASE_CONFIG)return {mode:'off'};if(!S||S.state==='loading')return {mode:'loading'};return {mode:S.user?'on':'out',state:S.state,user:S.user,last:S.lastSync}}
+function renderSync(){const b=el('syncBtn');if(!b)return;const i=syncInfo();if(i.mode==='off'){b.innerHTML='<span class="sync-dot"></span><span class="hide-mobile">Sincronizar</span>';b.title='Configurar sincronização entre dispositivos';b.onclick=()=>goto('relatorio')}else if(i.mode==='loading'){b.innerHTML='<span class="sync-dot busy"></span><span class="hide-mobile">Conectando…</span>';b.onclick=null}else if(i.mode==='out'){b.innerHTML='<span class="sync-dot"></span>Entrar';b.title='Entrar com Google para salvar em todos os dispositivos';b.onclick=()=>window.Sync.signIn()}else{const u=i.user,ini=esc((u.displayName||u.email||'?').trim()[0].toUpperCase());const dot=i.state==='saving'?'busy':i.state==='error'?'err':'ok';const txt=i.state==='saving'?'Salvando…':i.state==='error'?'Erro ao sincronizar':i.state==='offline'?'Offline':'Sincronizado';b.innerHTML=`<span class="sync-dot ${dot}"></span><span class="hide-mobile">${txt}</span><span class="av" ${u.photoURL?`style="background-image:url('${esc(u.photoURL)}');color:transparent"`:''}>${ini}</span>`;b.title=(u.email||'')+' · '+txt;b.onclick=()=>goto('relatorio')}const c=el('syncCard');if(c){c.innerHTML=syncCardHtml();attachSyncCard()}}
+function syncCardHtml(){const i=syncInfo();if(i.mode==='off')return `<h3>Sincronizar entre dispositivos</h3><p class="small">A sincronização ainda não foi configurada neste site. Siga o guia <a href="https://github.com/CalebeRezende/plataformaoficial/blob/main/CONFIGURAR_SINCRONIZACAO.md" target="_blank" rel="noopener">CONFIGURAR_SINCRONIZACAO.md</a> (cerca de 5 minutos) para entrar com sua conta Google e acessar o mesmo progresso no computador e no celular.</p>`;if(i.mode==='loading')return '<h3>Sincronizar entre dispositivos</h3><p class="small">Conectando…</p>';if(i.mode==='out')return `<h3>Sincronizar entre dispositivos</h3><p class="small">Entre com sua conta Google para salvar seu progresso na nuvem e continuar de onde parou em qualquer computador ou celular. O progresso deste aparelho será somado ao que já estiver salvo.</p><div class="actions space"><button class="btn primary" data-sync="in">Entrar com Google</button></div>`;return `<div class="flex"><div><h3>Sincronizado com ${esc(i.user.email||i.user.displayName||'sua conta')}</h3><p class="small">Questões, provas reais, simulados, rascunhos, vídeos assistidos e guia de estudo são salvos automaticamente e aparecem em todos os dispositivos em que você entrar com esta conta.${i.last?' Última sincronização: '+new Date(i.last).toLocaleString('pt-BR')+'.':''}</p></div><span class="tag ${i.state==='error'?'bad':'ok'}">${i.state==='error'?'Erro':'Ativo'}</span></div><div class="actions space"><button class="btn" data-sync="now">Sincronizar agora</button><button class="btn ghost" data-sync="out">Sair desta conta</button></div>`}
+function attachSyncCard(){$$('[data-sync]').forEach(b=>b.onclick=()=>{const a=b.dataset.sync;if(a==='in')window.Sync.signIn();else if(a==='out'){if(confirm('Sair da conta? O progresso continua salvo na nuvem e neste aparelho.'))window.Sync.signOut()}else window.Sync.flush(true)})}
+
 /* ---------- Render ---------- */
 document.addEventListener('keydown',e=>{if(!keyHandler||e.ctrlKey||e.metaKey||e.altKey)return;let t=e.target;if(t.closest&&t.closest('input,textarea,select,[contenteditable]'))return;if(e.key==='Enter'&&t.closest&&t.closest('button,a'))return;keyHandler(e)});
-function render(){clearInterval(timerID);timerID=null;keyHandler=null;renderNav();if(NEEDS_BANK.has(view)&&BANK_STATE!=='ready')return bankPlaceholder();({dashboard,trilhas,questoes,simulado,discursiva,relatorio:report,fontes,reais:realPage,videos})[view]();
+function render(){clearInterval(timerID);timerID=null;keyHandler=null;renderNav();renderSync();if(NEEDS_BANK.has(view)&&BANK_STATE!=='ready')return bankPlaceholder();({dashboard,trilhas,questoes,simulado,discursiva,relatorio:report,fontes,reais:realPage,videos})[view]();
 if(view==='reais')timerID=setInterval(()=>{let t=el('realTimer'),r=realState(REAL_EXAMS.find(x=>x.id===realExamId));if(t)t.textContent=elapsed(r)},30000);
 if(view==='simulado'&&store.sim)timerID=setInterval(()=>{let tm=el('sTimer'),left=simRemaining();if(tm)tm.textContent=timerText(left);if(left<=0){clearInterval(timerID);finishSim()}},1000)}
 themeIcon();render();loadBank();
 if('serviceWorker' in navigator&&location.protocol==='https:')addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script>
+<script src="./firebase-config.js"></script>
+<script type="module">
+// Sincronização opcional via Firebase (login Google + Firestore). Só carrega se firebase-config.js estiver preenchido.
+const cfg = window.FIREBASE_CONFIG;
+if (cfg && cfg.apiKey) {
+  const V = '10.12.2', B = `https://www.gstatic.com/firebasejs/${V}/`;
+  const Sync = window.Sync = { state: 'loading', user: null, lastSync: 0, schedule() {}, flush() {}, signIn() {}, signOut() {} };
+  App.onSyncChange();
+  try {
+    const [{ initializeApp }, A, F] = await Promise.all([import(B + 'firebase-app.js'), import(B + 'firebase-auth.js'), import(B + 'firebase-firestore.js')]);
+    const app = initializeApp(cfg), auth = A.getAuth(app), db = F.getFirestore(app);
+    const DEVICE = Math.random().toString(36).slice(2);
+    let ref = null, unsub = null, timer = null, pending = false;
+    const set = st => { Sync.state = st; App.onSyncChange(); };
+    // Compacta tentativas para caber no limite de 1 MB do documento.
+    const pack = s => { const c = { ...s }; c.attempts = (s.attempts || []).slice(-12000).map(a => [a.id, a.choice, a.correct ? 1 : 0, Date.parse(a.time) || 0, a.sim ? 1 : 0]); return JSON.stringify(c); };
+    const unpack = str => { const c = JSON.parse(str); c.attempts = (c.attempts || []).map(a => Array.isArray(a) ? { id: a[0], choice: a[1], correct: !!a[2], time: new Date(a[3]).toISOString(), ...(a[4] ? { sim: true } : {}) } : a); return c; };
+    async function push() {
+      if (!ref) return; pending = false; set('saving');
+      try { await F.setDoc(ref, { data: pack(App.store), updatedAt: Date.now(), device: DEVICE }); Sync.lastSync = Date.now(); set(navigator.onLine ? 'ok' : 'offline'); }
+      catch (e) { console.warn('sync', e); set('error'); }
+    }
+    Sync.schedule = () => { if (!ref) return; pending = true; clearTimeout(timer); timer = setTimeout(push, 1500); };
+    Sync.flush = (manual) => { clearTimeout(timer); if (pending || manual) push(); };
+    Sync.signIn = async () => {
+      const p = new A.GoogleAuthProvider(); p.setCustomParameters({ prompt: 'select_account' });
+      try { await A.signInWithPopup(auth, p); }
+      catch (e) { if (/popup|cancelled-popup/.test(e.code || '')) return A.signInWithRedirect(auth, p); if (e.code !== 'auth/popup-closed-by-user') { alert('Não foi possível entrar: ' + (e.message || e.code)); } }
+    };
+    Sync.signOut = async () => { Sync.flush(); if (unsub) unsub(); unsub = null; ref = null; await A.signOut(auth); };
+    A.getRedirectResult(auth).catch(() => {});
+    A.onAuthStateChanged(auth, async user => {
+      Sync.user = user; if (unsub) { unsub(); unsub = null; }
+      if (!user) { ref = null; set('out'); return; }
+      ref = F.doc(db, 'usuarios', user.uid); set('saving');
+      try {
+        const snap = await F.getDoc(ref);
+        if (snap.exists()) { App.apply(App.merge(App.store, unpack(snap.data().data))); App.toast('Progresso sincronizado'); }
+        await push();
+        unsub = F.onSnapshot(ref, d => {
+          if (!d.exists() || d.metadata.hasPendingWrites) return;
+          const v = d.data(); if (v.device === DEVICE) return;
+          App.apply(App.merge(App.store, unpack(v.data))); Sync.lastSync = Date.now(); set('ok');
+        }, () => set('error'));
+      } catch (e) { console.warn('sync', e); set('error'); }
+    });
+    addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') Sync.flush(); });
+    addEventListener('online', () => { if (Sync.user) Sync.flush(true); });
+    addEventListener('offline', () => { if (Sync.user) set('offline'); });
+  } catch (e) { console.warn('Firebase indisponível', e); Sync.state = 'error'; App.onSyncChange(); }
+}
 </script>
 </body>
 </html>

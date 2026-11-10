@@ -27,6 +27,7 @@ Guia com mais detalhes: [PUBLICAR_NO_GITHUB.md](PUBLICAR_NO_GITHUB.md).
 - `questoes/`: banco de questões em JSON, carregado sob demanda; `questoes/index.json` lista os arquivos.
 - `ferramentas/adicionar_questoes.mjs`: adiciona novas questões ao banco, embaralhando as alternativas e equilibrando o gabarito.
 - `icons/`, `manifest.webmanifest`, `sw.js`: ícone, instalação no celular e uso offline.
+- `firebase-config.js`, `firestore.rules`: configuração opcional da sincronização entre dispositivos.
 - `.nojekyll`: evita o processamento Jekyll no GitHub Pages.
 
 ## Como adicionar questões
