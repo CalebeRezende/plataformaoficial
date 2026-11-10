@@ -1,0 +1,49 @@
+{
+ "atualizado": "2026-11-10",
+ "arquivos": [
+  {
+   "arquivo": "administrativo-civil.json",
+   "total": 433
+  },
+  {
+   "arquivo": "atualidades.json",
+   "total": 102
+  },
+  {
+   "arquivo": "constitucional.json",
+   "total": 333
+  },
+  {
+   "arquivo": "gerais.json",
+   "total": 73
+  },
+  {
+   "arquivo": "informatica-lbi.json",
+   "total": 393
+  },
+  {
+   "arquivo": "legislacao-especial.json",
+   "total": 104
+  },
+  {
+   "arquivo": "matematica-logica.json",
+   "total": 224
+  },
+  {
+   "arquivo": "penal.json",
+   "total": 351
+  },
+  {
+   "arquivo": "portugues.json",
+   "total": 600
+  },
+  {
+   "arquivo": "processo-civil.json",
+   "total": 726
+  },
+  {
+   "arquivo": "processo-penal.json",
+   "total": 306
+  }
+ ]
+}

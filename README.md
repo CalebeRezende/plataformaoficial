@@ -15,7 +15,7 @@ Guia com mais detalhes: [PUBLICAR_NO_GITHUB.md](PUBLICAR_NO_GITHUB.md).
 ## O que já vem carregado
 
 - **280 questões de provas reais** (TJ-SP 2024 v1, 2023 v4 e 2009 v1) com gabarito oficial. Os cadernos em PDF **já abrem automaticamente** ao lado da folha de respostas — não é preciso baixar nem carregar nada.
-- **70 questões autorais comentadas**, com tema, explicação e base legal.
+- **Banco de questões no estilo Vunesp** (pasta `questoes/`), com casos práticos, letra da lei, gabarito comentado e base legal. O simulado sorteia 70 questões na distribuição do edital (15 Português, 40 Específicos, 15 Gerais), priorizando as que você ainda não respondeu.
 - **29 módulos de estudo**, plano do dia orientado pelos erros, **simulado de 70 questões + 2 discursivas** com cronômetro de 5 h.
 - Diagnóstico por disciplina, histórico de simulados e exportação/importação do progresso em JSON.
 - Tema claro e escuro, atalhos de teclado (A–E para marcar, ← → para navegar) e layout adaptado ao celular.
@@ -23,13 +23,19 @@ Guia com mais detalhes: [PUBLICAR_NO_GITHUB.md](PUBLICAR_NO_GITHUB.md).
 
 ## Estrutura dos arquivos
 
-- `index.html`: aplicativo completo, com todos os dados embutidos.
+- `index.html`: aplicativo completo (interface, provas reais, gabaritos e guia de estudo).
+- `questoes/`: banco de questões em JSON, carregado sob demanda; `questoes/index.json` lista os arquivos.
+- `ferramentas/adicionar_questoes.mjs`: adiciona novas questões ao banco, embaralhando as alternativas e equilibrando o gabarito.
 - `icons/`, `manifest.webmanifest`, `sw.js`: ícone, instalação no celular e uso offline.
 - `.nojekyll`: evita o processamento Jekyll no GitHub Pages.
 
-## Como editar as questões
+## Como adicionar questões
 
-As questões ficam nas constantes `QUESTIONS`, `TOPICS`, `REAL_EXAMS`, `DISCS` e `SOURCES`, no início do `<script>` do `index.html`. Edite, salve e faça commit.
+1. Crie um arquivo JSON com as questões novas. A alternativa **correta deve ser a primeira**:
+   `[{"t": "D9", "n": 2, "s": "Enunciado…", "o": ["certa", "errada", "errada", "errada", "errada"], "e": "Comentário", "l": "CPC, art. 252"}]`
+   (`t` = código do assunto, como P1–P7, D1–D22 ou G1–G5; `n` = nível, 1 médio e 2 difícil.)
+2. Rode `node ferramentas/adicionar_questoes.mjs novas.json processo-civil` (o segundo argumento é o arquivo de destino em `questoes/`).
+3. Faça commit da pasta `questoes/`.
 
 ## Visualização dos PDFs
 
